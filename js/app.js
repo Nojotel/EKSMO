@@ -46,6 +46,7 @@ send.addEventListener("click", function () {
     voice.classList.remove("active");
     voice.classList.add("active_success");
     textarea.classList.add("hidden");
+    answer.classList.add("click");
   } else if (click == 2) {
     voice.classList.remove("active_success");
     answer.textContent = "говорите";
