@@ -63,6 +63,7 @@
   cursor: pointer;
   outline: none;
   margin-top: 88px;
+  padding: 0;
 }
 .voice__stop {
   width: 92px;
@@ -78,6 +79,7 @@
   background-position: center;
   cursor: pointer;
   outline: none;
+  padding: 0;
 }
 .voice__success {
   width: 92px;
@@ -94,6 +96,7 @@
   cursor: pointer;
   outline: none;
   margin-top: 88px;
+  padding: 0;
 }
 .click {
   color: #000000;
