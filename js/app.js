@@ -1,91 +1,100 @@
-//Textarea растет в высоту
-const textarea = document.querySelector(".textarea");
-const padding = textarea.offsetHeight - textarea.clientHeight;
-textarea.oninput = (e) => {
-  textarea.style.height = "40px";
-  textarea.style.height = textarea.scrollHeight + padding + "px";
-};
-// Вывод сообщения пользователя
-const answer = document.querySelector(".answer");
-textarea.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    answer.classList.add("click");
-    answer.textContent = textarea.value;
-
-    if (textarea.value == "") {
-      answer.classList.add("click");
-      answer.textContent = "Это, наверно, не Луна перевернулась, а мы сами перевернулись.";
+class VoiceRecorder {
+  constructor() {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      console.log("getUserMedia supported");
+    } else {
+      console.log("getUserMedia is not supported on your browser!");
     }
-    textarea.value = "";
+
+    this.mediaRecorder;
+    this.stream;
+    this.chunks = [];
+    this.isRecording = false;
+
+    this.recorderRef = document.querySelector(".recorder");
+    this.playerRef = document.querySelector(".player");
+    this.startRef = document.querySelector(".voice__start");
+    this.stopRef = document.querySelector(".voice__stop");
+
+    this.startRef.onclick = this.startRecording.bind(this);
+    this.stopRef.onclick = this.stopRecording.bind(this);
+
+    this.constraints = {
+      audio: true,
+      video: false,
+    };
   }
-  if (textarea.value != "") {
-    send.classList.remove("hidden");
-  } else {
-    send.classList.add("hidden");
+
+  handleSuccess(stream) {
+    this.stream = stream;
+    this.stream.oninactive = () => {
+      console.log("Stream ended!");
+    };
+    this.recorderRef.srcObject = this.stream;
+    this.mediaRecorder = new MediaRecorder(this.stream);
+    console.log(this.mediaRecorder);
+    this.mediaRecorder.ondataavailable = this.onMediaRecorderDataAvailable.bind(this);
+    this.mediaRecorder.onstop = this.onMediaRecorderStop.bind(this);
+    this.recorderRef.play();
+    this.mediaRecorder.start();
   }
+
+  handleError(error) {
+    console.log("navigator.getUserMedia error: ", error);
+  }
+
+  onMediaRecorderDataAvailable(e) {
+    this.chunks.push(e.data);
+  }
+
+  onMediaRecorderStop(e) {
+    const blob = new Blob(this.chunks, { type: "audio/ogg; codecs=opus" });
+    const audioURL = window.URL.createObjectURL(blob);
+    this.playerRef.src = audioURL;
+    this.chunks = [];
+    this.stream.getAudioTracks().forEach((track) => track.stop());
+    this.stream = null;
+  }
+
+  startRecording() {
+    if (this.isRecording) return;
+    this.isRecording = true;
+    this.playerRef.src = "";
+    navigator.mediaDevices.getUserMedia(this.constraints).then(this.handleSuccess.bind(this)).catch(this.handleError.bind(this));
+  }
+
+  stopRecording() {
+    if (!this.isRecording) return;
+    this.isRecording = false;
+    this.recorderRef.pause();
+    this.mediaRecorder.stop();
+  }
+}
+
+const sendVoice = document.querySelector(".voice__start");
+const stopVoice = document.querySelector(".voice__stop");
+const successVoice = document.querySelector(".voice__success");
+const answer = document.querySelector(".answer");
+const svgTember = document.querySelector(".svg");
+
+sendVoice.addEventListener("click", function () {
+  sendVoice.classList.add("hidden");
+  svgTember.classList.remove("hidden");
+  stopVoice.classList.remove("hidden");
+  answer.classList.add("click");
+  answer.textContent = "Незнайка, а почему все переверну...";
+});
+stopVoice.addEventListener("click", function () {
+  stopVoice.classList.add("hidden");
+  svgTember.classList.add("hidden");
+  successVoice.classList.remove("hidden");
+  answer.textContent = "Это, наверно, не Луна перевернулась, а мы сами перевернулись.";
+});
+successVoice.addEventListener("click", function () {
+  sendVoice.classList.remove("hidden");
+  successVoice.classList.add("hidden");
+  answer.textContent = "говорите";
+  answer.classList.remove("click");
 });
 
-//По кнопке
-const send = document.querySelector(".send");
-send.addEventListener("click", function () {
-  answer.textContent = textarea.value;
-  textarea.value = "";
-  send.classList.add("hidden");
-  textarea.style.height = "40px";
-  click = 1;
-  if (click == 0) {
-    voice.classList.add("active");
-    answer.textContent = "Незнайка, а почему все переверну...";
-    answer.classList.add("click");
-    svg.classList.remove("hidden");
-    textarea.classList.add("hidden");
-  } else if (click == 1) {
-    answer.textContent = "Это, наверно, не Луна перевернулась, а мы сами перевернулись.";
-    svg.classList.add("hidden");
-    voice.classList.remove("active");
-    voice.classList.add("active_success");
-    textarea.classList.add("hidden");
-    answer.classList.add("click");
-  } else if (click == 2) {
-    voice.classList.remove("active_success");
-    answer.textContent = "говорите";
-    answer.classList.remove("click");
-    textarea.classList.remove("hidden");
-    click = -1;
-  }
-  click++;
-});
-
-//Micro
-const voice = document.querySelector(".voice");
-const svg = document.querySelector(".svg");
-let click = 0;
-voice.addEventListener("click", function () {
-  if (answer.textContent == "говорите") {
-    navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-      console.log(stream.active);
-    });
-  }
-  send.classList.add("hidden");
-
-  if (click == 0) {
-    voice.classList.add("active");
-    answer.textContent = "Незнайка, а почему все переверну...";
-    answer.classList.add("click");
-    svg.classList.remove("hidden");
-    textarea.classList.add("hidden");
-  } else if (click == 1) {
-    answer.textContent = "Это, наверно, не Луна перевернулась, а мы сами перевернулись.";
-    svg.classList.add("hidden");
-    voice.classList.remove("active");
-    voice.classList.add("active_success");
-  } else if (click == 2) {
-    voice.classList.remove("active_success");
-    answer.textContent = "говорите";
-    answer.classList.remove("click");
-    textarea.classList.remove("hidden");
-    click = -1;
-  }
-  click++;
-});
+window.voiceRecorder = new VoiceRecorder();
