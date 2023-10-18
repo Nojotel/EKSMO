@@ -48,7 +48,7 @@ class VoiceRecorder {
   }
 
   onMediaRecorderStop(e) {
-    const blob = new Blob(this.chunks, { type: "audio/ogg; codecs=opus" });
+    const blob = new Blob(this.chunks, { type: "audio/mp3; codecs=opus" });
     const audioURL = window.URL.createObjectURL(blob);
     this.playerRef.src = audioURL;
     this.chunks = [];

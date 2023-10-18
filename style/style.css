@@ -36,17 +36,20 @@
   background-repeat: repeat-x;
   margin-bottom: 5px;
   animation-name: slideSVG;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   background-size: 50% 100%;
 }
 @keyframes slideSVG {
   0% {
-    background-position: 0% 0%;
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
   }
   100% {
-    background-position: 100% 0%;
+    background-position: 0% 0%;
   }
 }
 .voice__start {
@@ -63,7 +66,6 @@
   cursor: pointer;
   outline: none;
   margin-top: 88px;
-  padding: 0;
 }
 .voice__stop {
   width: 92px;
@@ -79,7 +81,6 @@
   background-position: center;
   cursor: pointer;
   outline: none;
-  padding: 0;
 }
 .voice__success {
   width: 92px;
@@ -96,7 +97,6 @@
   cursor: pointer;
   outline: none;
   margin-top: 88px;
-  padding: 0;
 }
 .click {
   color: #000000;
