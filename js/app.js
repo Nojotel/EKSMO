@@ -59,7 +59,8 @@ class VoiceRecorder {
     this.playerRef.src = audioURL;
     this.chunks = [];
     this.stream.getAudioTracks().forEach((track) => track.stop());
-    this.stream = null;*/
+    this.stream = null
+    ыы;*/
   }
 
   startRecording() {
