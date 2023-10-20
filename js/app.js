@@ -48,12 +48,18 @@ class VoiceRecorder {
   }
 
   onMediaRecorderStop(e) {
-    const blob = new Blob(this.chunks, { type: "audio/mp3; codecs=opus" });
-    const audioURL = window.URL.createObjectURL(blob);
+    const blob = new Blob(this.chunks, { type: "audio/wav; codecs=opus" });
+
+    let req = new Request("https://farm.pythonanywhere.com/upload/", { method: "POST", body: blob, headers: { "Content-Type": "multipart/form-data" } });
+    fetch(req).then(
+      () => console.log("Файл сохранен"),
+      () => console.log("Ошибка сохранения")
+    );
+    /* const audioURL = window.URL.createObjectURL(blob);
     this.playerRef.src = audioURL;
     this.chunks = [];
     this.stream.getAudioTracks().forEach((track) => track.stop());
-    this.stream = null;
+    this.stream = null;*/
   }
 
   startRecording() {
