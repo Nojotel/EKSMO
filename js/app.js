@@ -89,11 +89,6 @@ async function senVoice(blob) {
   if (promise.ok) {
     let response = await promise.json();
     console.log(response.data);
-    let audio = document.createElement("audio");
-    audio.src = response.data;
-    audio.controls = true;
-    audio.autoplay = true;
-    document.querySelector("#messages").appendChild(audio);
   }
   console.log(blob);
 }
