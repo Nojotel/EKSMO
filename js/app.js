@@ -48,7 +48,7 @@ class VoiceRecorder {
   }
 
   onMediaRecorderStop(e) {
-    const blob = new Blob(this.chunks, { type: "audio/wav; codecs=opus" });
+    const blob = new Blob(this.chunks, { type: "audio/mp3" });
     const audioURL = window.URL.createObjectURL(blob);
     this.playerRef.src = audioURL;
     this.chunks = [];
@@ -73,24 +73,13 @@ class VoiceRecorder {
 }
 
 async function senVoice(blob) {
+  let formData = new FormData();
+  formData.append("audio", blob);
+  console.log(blob);
   let promise = await fetch("https://farm.pythonanywhere.com/upload/", {
     method: "POST",
-    body: blob,
-    headers: {
-      keys: "audio",
-      "Content-Type": "multipart/form-data",
-      //"Cache-Control": "no-cache",
-      // "Access-Control-Allow-Headers": "true",
-      // "Access-Control-Allow-Origin": "*",
-      // "Access-Control-Allow-Methods": "POST",
-      //  Authorization: false,
-    },
+    body: formData,
   });
-  if (promise.ok) {
-    let response = await promise.json();
-    console.log(response.data);
-  }
-  console.log(blob);
 }
 
 const sendVoice = document.querySelector(".voice__start");
