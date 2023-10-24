@@ -1,7 +1,163 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --color-background: #096084;
+  --color-transparent: rgba(28, 28, 28, 0);
+}
+button {
+  cursor: pointer;
+}
+body {
+  background-color: var(--color-background);
+}
 .container {
+  background-image: url(../img/moon.png);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-position: bottom left;
+}
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 95vw;
+  height: 100vh;
+  background: url(../img/Star\ 6.svg) 30% 15% no-repeat fixed, url(../img/Star\ 2.svg) 75% 12% no-repeat fixed, url(../img/Star\ 1.svg) 40% 40% no-repeat fixed, url(../img/Star\ 3.svg) 90% 35% no-repeat fixed, url(../img/Star\ 7.svg) 73% 70% no-repeat fixed;
+}
+.container-main__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__home {
+  width: 110px;
+  height: 110px;
+  background-image: url(../img/House.svg);
+  background-color: var(--color-transparent);
+  background-repeat: no-repeat;
+  border: 0;
+  margin-top: 20px;
+}
+.navigation__keyboard {
+  width: 110px;
+  height: 110px;
+  background-image: url(../img/keyboard.svg);
+  background-color: var(--color-transparent);
+  background-repeat: no-repeat;
+  border: 0;
+  margin-top: 20px;
+}
+.container-main__neznayka {
+  position: fixed;
+  left: 5vh;
+  bottom: 222px;
+  display: flex;
+  justify-content: space-between;
+  width: 84vw;
+}
+.neznayka__image {
+  width: 394.015px;
+  height: 592.973px;
+}
+.microphone_start {
+  background-image: url(../img/microphone_earth.svg), url(../img/microphone_handle.svg);
+  background-repeat: no-repeat;
+  background-position: left top, bottom right;
+  background-color: var(--color-transparent);
+  border: 0;
+  width: 144px;
+  height: 200px;
+  position: fixed;
+  bottom: -5px;
+  right: 30px;
+}
+.microphone_stop {
+  background-color: var(--color-transparent);
+  border: 0;
+  width: 144px;
+  height: 200px;
+  position: fixed;
+  bottom: -5px;
+  right: 30px;
+}
+.microphone_handle {
+  background-image: url(../img/microphone_handle.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border: 0;
+  width: 144px;
+  height: 144px;
+  position: fixed;
+  bottom: -5px;
+  right: 30px;
+}
+.microphone_earth {
+  background-image: url(../img/microphone_earth.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-color: var(--color-transparent);
+  border: 0;
+  width: 95px;
+  height: 95px;
+  position: fixed;
+  bottom: 100px;
+  right: 80px;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.neznayka__text {
+}
+.neznayka__answer {
+  background-image: url(../img/dialog-Незнайка.png);
+  background-repeat: no-repeat;
+  width: 470px;
+  height: 242px;
+  position: relative;
+  right: 16vw;
+  bottom: 6vh;
+
+  color: #000;
+  font-family: Shantell Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 40px;
+}
+.neznayka__question {
+  background-image: url(../img/dialog-user.png);
+  background-repeat: no-repeat;
+  width: 470px;
+  height: 242px;
+  position: relative;
+  left: 6vw;
+
+  color: #000;
+  font-family: Shantell Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 40px;
+}
+.hidden {
+  display: none;
+}
+/*.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,4 +269,4 @@
 }
 .player {
   margin-top: 25px;
-}
+}*/

@@ -13,8 +13,8 @@ class VoiceRecorder {
 
     this.recorderRef = document.querySelector(".recorder");
     this.playerRef = document.querySelector(".player");
-    this.startRef = document.querySelector(".voice__start");
-    this.stopRef = document.querySelector(".voice__stop");
+    this.startRef = document.querySelector(".microphone_start");
+    this.stopRef = document.querySelector(".microphone_stop");
 
     this.startRef.onclick = this.startRecording.bind(this);
     this.stopRef.onclick = this.stopRecording.bind(this);
@@ -80,32 +80,25 @@ async function senVoice(blob) {
     method: "POST",
     body: formData,
   });
+  let response = await promise.json();
+  console.log(response.recognized_text);
+  answer.textContent = `${response.recognized_text}`;
 }
 
-const sendVoice = document.querySelector(".voice__start");
-const stopVoice = document.querySelector(".voice__stop");
-const successVoice = document.querySelector(".voice__success");
-const answer = document.querySelector(".answer");
-const svgTember = document.querySelector(".svg");
+const sendVoice = document.querySelector(".microphone_start");
+const stopVoice = document.querySelector(".microphone_stop");
+const answer = document.querySelector(".neznayka__answer");
+const question = document.querySelector(".neznayka__question");
 
 sendVoice.addEventListener("click", function () {
   sendVoice.classList.add("hidden");
-  svgTember.classList.remove("hidden");
   stopVoice.classList.remove("hidden");
-  answer.classList.add("click");
-  answer.textContent = "Незнайка, а почему все переверну...";
+  question.textContent = "Привет, Незнайка! Меня зовут Александр. Расскажи, а Земля круглая?";
+  answer.textContent = "...";
 });
 stopVoice.addEventListener("click", function () {
   stopVoice.classList.add("hidden");
-  svgTember.classList.add("hidden");
-  successVoice.classList.remove("hidden");
-  answer.textContent = "Это, наверно, не Луна перевернулась, а мы сами перевернулись.";
-});
-successVoice.addEventListener("click", function () {
   sendVoice.classList.remove("hidden");
-  successVoice.classList.add("hidden");
-  answer.textContent = "говорите";
-  answer.classList.remove("click");
 });
 
 window.voiceRecorder = new VoiceRecorder();
