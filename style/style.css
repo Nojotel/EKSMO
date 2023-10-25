@@ -26,11 +26,14 @@ body {
   margin: 0 auto;
   width: 95vw;
   height: 100vh;
-  /*background: url(../img/Star\ 6.svg) 30% 15% no-repeat fixed, url(../img/Star\ 2.svg) 75% 12% no-repeat fixed, url(../img/Star\ 1.svg) 40% 40% no-repeat fixed, url(../img/Star\ 3.svg) 90% 35% no-repeat fixed, url(../img/Star\ 7.svg) 73% 70% no-repeat fixed;
-  animation-name: stars1;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;*/
+}
+.star {
+  opacity: 0;
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-timing-function: linear;
 }
 .stars1 {
   width: 50px;
@@ -103,15 +106,22 @@ body {
   justify-content: space-between;
 }
 .navigation__home {
+  opacity: 0;
   width: 110px;
   height: 110px;
   background-image: url(../img/House.svg);
   background-color: var(--color-transparent);
   background-repeat: no-repeat;
   border: 0;
-  margin-top: 20px;
+  margin-top: 10px;
+  animation-name: size;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 .navigation__keyboard {
+  opacity: 0;
   width: 110px;
   height: 110px;
   background-image: url(../img/keyboard.svg);
@@ -119,9 +129,13 @@ body {
   background-repeat: no-repeat;
   border: 0;
   margin-top: 20px;
+  animation-name: size;
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 .container-main__neznayka {
-  position: fixed;
   left: 5vh;
   bottom: 222px;
   display: flex;
@@ -129,10 +143,20 @@ body {
   width: 84vw;
 }
 .neznayka__image {
-  width: 394.015px;
-  height: 592.973px;
+  opacity: 0;
+  position: relative;
+  bottom: 23vh;
+  left: 0vw;
+  width: 600px;
+  height: 600px;
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+  animation-timing-function: linear;
 }
 .microphone_start {
+  opacity: 0;
   background-image: url(../img/microphone_earth.svg), url(../img/microphone_handle.svg);
   background-repeat: no-repeat;
   background-position: left top, bottom right;
@@ -143,6 +167,12 @@ body {
   position: fixed;
   bottom: -5px;
   right: 30px;
+
+  animation-name: visibilityMicro;
+  animation-duration: 1s;
+  animation-delay: 9s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 .microphone_stop {
   background-color: var(--color-transparent);
@@ -180,6 +210,69 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+.neznayka__text {
+}
+.neznayka__answer {
+  opacity: 0;
+  background-image: url(../img/dialog-Незнайка.png);
+  background-repeat: no-repeat;
+  width: 470px;
+  height: 242px;
+  position: relative;
+  right: 16vw;
+  bottom: 25vh;
+
+  color: #000;
+  font-family: Shantell Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 40px;
+
+  animation-name: sizeText;
+  animation-duration: 1s;
+  animation-delay: 8s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.neznayka__question {
+  opacity: 0;
+  background-image: url(../img/dialog-user.png);
+  background-repeat: no-repeat;
+  width: 470px;
+  height: 242px;
+  position: fixed;
+  bottom: 38vh;
+  left: 56vw;
+
+  color: #000;
+  font-family: Shantell Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 40px;
+
+  animation-name: sizeTextQuestion;
+  animation-duration: 1s;
+  animation-delay: 9s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.hidden {
+  display: none;
+}
+.opacity {
+  opacity: 100;
+}
+.pulse {
+  animation-name: sizeMicro;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 @keyframes rotate {
   0% {
@@ -209,43 +302,81 @@ body {
     background-position: 0% 0%;
   }
 }
-.neznayka__text {
+@keyframes visibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
-.neznayka__answer {
-  background-image: url(../img/dialog-Незнайка.png);
-  background-repeat: no-repeat;
-  width: 470px;
-  height: 242px;
-  position: relative;
-  right: 16vw;
-  bottom: 6vh;
-
-  color: #000;
-  font-family: Shantell Sans;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding: 40px;
+@keyframes size {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.neznayka__question {
-  background-image: url(../img/dialog-user.png);
-  background-repeat: no-repeat;
-  width: 470px;
-  height: 242px;
-  position: relative;
-  left: 6vw;
-
-  color: #000;
-  font-family: Shantell Sans;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding: 40px;
+@keyframes sizeText {
+  0% {
+    transform: scale(0);
+    right: 25vw;
+    bottom: 15vh;
+  }
+  80% {
+    transform: scale(1.1);
+    right: 16vw;
+    bottom: 25vh;
+  }
+  100% {
+    transform: scale(1);
+    right: 16vw;
+    bottom: 25vh;
+  }
 }
-.hidden {
-  display: none;
+@keyframes sizeTextQuestion {
+  0% {
+    transform: scale(0);
+    bottom: 20vh;
+    left: 70vw;
+  }
+  80% {
+    transform: scale(1.1);
+    bottom: 38vh;
+    left: 56vw;
+  }
+  100% {
+    transform: scale(1);
+    bottom: 38vh;
+    left: 56vw;
+  }
+}
+@keyframes visibilityMicro {
+  0% {
+    transform: scale(0);
+    bottom: -100px;
+    right: -30px;
+  }
+  100% {
+    transform: scale(1);
+    bottom: -5px;
+    right: 30px;
+  }
+}
+@keyframes sizeMicro {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 /*.container {
   display: flex;

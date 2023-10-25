@@ -1,3 +1,67 @@
+const home = document.querySelector(".navigation__home");
+const keyboard = document.querySelector(".navigation__keyboard");
+const star = document.querySelector(".star");
+const neznayka = document.querySelector(".neznayka__image");
+const answerText = document.querySelector(".neznayka__answer");
+const answerQuestion = document.querySelector(".neznayka__question");
+const startMicro = document.querySelector(".microphone_start");
+
+function visibilityStar() {
+  star.classList.add("opacity");
+}
+setTimeout(visibilityStar, 2000);
+
+function visibilityHome() {
+  home.classList.add("opacity");
+}
+setTimeout(visibilityHome, 2010);
+
+function visibilityKeyboard() {
+  keyboard.classList.add("opacity");
+}
+setTimeout(visibilityKeyboard, 2510);
+
+function visibilityAnswerText() {
+  answerText.classList.add("opacity");
+  let text = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
+  let delay = 40;
+  let elem = document.querySelector(".neznayka__answer");
+
+  let print_text = function (text, elem, delay) {
+    if (text.length > 0) {
+      elem.innerHTML += text[0];
+
+      setTimeout(function () {
+        print_text(text.slice(1), elem, delay);
+      }, delay);
+    }
+  };
+
+  print_text(text, elem, delay);
+}
+setTimeout(visibilityAnswerText, 8050);
+
+function visibilityNeznayka() {
+  neznayka.src = "./img/Привет, меня зовут Незн. Давай поболтаем.gif";
+  neznayka.classList.add("opacity");
+}
+setTimeout(visibilityNeznayka, 3050);
+
+function visibilityQuestionText() {
+  answerQuestion.classList.add("opacity");
+}
+setTimeout(visibilityQuestionText, 9050);
+
+function visibilityMicro() {
+  startMicro.classList.add("opacity");
+}
+setTimeout(visibilityMicro, 9050);
+
+function sizeMicro() {
+  startMicro.classList.add("pulse");
+}
+setTimeout(sizeMicro, 10050);
+
 class VoiceRecorder {
   constructor() {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -83,6 +147,7 @@ async function senVoice(blob) {
   let response = await promise.json();
   console.log(response.recognized_text);
   answer.textContent = `${response.recognized_text}`;
+  neznayka.src = "./img/wait-for-question-and-answer.gif";
 }
 
 const sendVoice = document.querySelector(".microphone_start");
@@ -99,6 +164,10 @@ sendVoice.addEventListener("click", function () {
 stopVoice.addEventListener("click", function () {
   stopVoice.classList.add("hidden");
   sendVoice.classList.remove("hidden");
+});
+
+home.addEventListener("click", function () {
+  startMicro.animationPlayPtate = "paused";
 });
 
 window.voiceRecorder = new VoiceRecorder();
