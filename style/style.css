@@ -26,8 +26,78 @@ body {
   margin: 0 auto;
   width: 95vw;
   height: 100vh;
-  background: url(../img/Star\ 6.svg) 30% 15% no-repeat fixed, url(../img/Star\ 2.svg) 75% 12% no-repeat fixed, url(../img/Star\ 1.svg) 40% 40% no-repeat fixed, url(../img/Star\ 3.svg) 90% 35% no-repeat fixed, url(../img/Star\ 7.svg) 73% 70% no-repeat fixed;
+  /*background: url(../img/Star\ 6.svg) 30% 15% no-repeat fixed, url(../img/Star\ 2.svg) 75% 12% no-repeat fixed, url(../img/Star\ 1.svg) 40% 40% no-repeat fixed, url(../img/Star\ 3.svg) 90% 35% no-repeat fixed, url(../img/Star\ 7.svg) 73% 70% no-repeat fixed;
+  animation-name: stars1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;*/
 }
+.stars1 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 6.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 13%;
+  left: 33%;
+  animation-name: stars;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.stars2 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 2.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 9%;
+  left: 72%;
+  animation-name: stars;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.stars3 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 1.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 39%;
+  left: 38%;
+  animation-name: stars;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.stars4 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 3.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 32%;
+  left: 82%;
+  animation-name: stars;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.stars5 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 7.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 67%;
+  left: 72%;
+  animation-name: stars;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 .container-main__navigation {
   display: flex;
   justify-content: space-between;
@@ -117,6 +187,26 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes stars {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 75% 75%;
+  }
+  40% {
+    background-position: 50% 50%;
+  }
+  60% {
+    background-position: 30% 90%;
+  }
+  80% {
+    background-position: 75% 25%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 .neznayka__text {
