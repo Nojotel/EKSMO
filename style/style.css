@@ -11,6 +11,24 @@ button {
 body {
   background-color: var(--color-background);
 }
+
+.hello_container {
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-position: bottom left;
+}
+.hello_container__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hello__gif {
+  width: 80vw;
+  height: 70vh;
+  margin-top: 100px;
+}
+
 .container {
   background-image: url(../img/moon.png);
   background-repeat: no-repeat;

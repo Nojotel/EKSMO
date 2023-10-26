@@ -5,21 +5,35 @@ const neznayka = document.querySelector(".neznayka__image");
 const answerText = document.querySelector(".neznayka__answer");
 const answerQuestion = document.querySelector(".neznayka__question");
 const startMicro = document.querySelector(".microphone_start");
+const hello = document.querySelector(".hello_container");
+const main = document.querySelector(".container");
+const helloGIF = document.querySelector(".hello__gif");
+const timeHello = 6000;
+
+function start() {
+  helloGIF.src = "./img/Book.gif";
+}
+start();
+function visibilityHello() {
+  hello.classList.add("hidden");
+  main.classList.remove("hidden");
+}
+setTimeout(visibilityHello, timeHello);
 
 function visibilityStar() {
   star.classList.add("opacity");
 }
-setTimeout(visibilityStar, 2000);
+setTimeout(visibilityStar, 2000 + timeHello);
 
 function visibilityHome() {
   home.classList.add("opacity");
 }
-setTimeout(visibilityHome, 2010);
+setTimeout(visibilityHome, 2010 + timeHello);
 
 function visibilityKeyboard() {
   keyboard.classList.add("opacity");
 }
-setTimeout(visibilityKeyboard, 2510);
+setTimeout(visibilityKeyboard, 2510 + timeHello);
 
 function visibilityAnswerText() {
   answerText.classList.add("opacity");
@@ -39,28 +53,28 @@ function visibilityAnswerText() {
 
   print_text(text, elem, delay);
 }
-setTimeout(visibilityAnswerText, 8050);
+setTimeout(visibilityAnswerText, 8050 + timeHello);
 
 function visibilityNeznayka() {
   neznayka.src = "./img/Привет, меня зовут Незн. Давай поболтаем.gif";
   neznayka.classList.add("opacity");
 }
-setTimeout(visibilityNeznayka, 3050);
+setTimeout(visibilityNeznayka, 3050 + timeHello);
 
 function visibilityQuestionText() {
   answerQuestion.classList.add("opacity");
 }
-setTimeout(visibilityQuestionText, 9050);
+setTimeout(visibilityQuestionText, 9050 + timeHello);
 
 function visibilityMicro() {
   startMicro.classList.add("opacity");
 }
-setTimeout(visibilityMicro, 9050);
+setTimeout(visibilityMicro, 9050 + timeHello);
 
 function sizeMicro() {
   startMicro.classList.add("pulse");
 }
-setTimeout(sizeMicro, 10050);
+setTimeout(sizeMicro, 10050 + timeHello);
 
 class VoiceRecorder {
   constructor() {
@@ -133,6 +147,7 @@ class VoiceRecorder {
     this.isRecording = false;
     this.recorderRef.pause();
     this.mediaRecorder.stop();
+    question.textContent = "Подожди, я думаю";
   }
 }
 
@@ -146,7 +161,8 @@ async function senVoice(blob) {
   });
   let response = await promise.json();
   console.log(response.recognized_text);
-  answer.textContent = `${response.recognized_text}`;
+  question.textContent = `${response.recognized_text}`;
+  answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
   neznayka.src = "./img/wait-for-question-and-answer.gif";
 }
 
@@ -158,7 +174,7 @@ const question = document.querySelector(".neznayka__question");
 sendVoice.addEventListener("click", function () {
   sendVoice.classList.add("hidden");
   stopVoice.classList.remove("hidden");
-  question.textContent = "Привет, Незнайка! Меня зовут Александр. Расскажи, а Земля круглая?";
+  question.textContent = "Идет запись...";
   answer.textContent = "...";
 });
 stopVoice.addEventListener("click", function () {
