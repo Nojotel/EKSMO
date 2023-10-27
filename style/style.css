@@ -25,10 +25,9 @@ body {
 }
 .hello__gif {
   width: 80vw;
-  height: 70vh;
+  height: 80vh;
   margin-top: 100px;
 }
-
 .container {
   background-image: url(../img/moon.png);
   background-repeat: no-repeat;
@@ -138,6 +137,16 @@ body {
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
+.clear {
+  background-image: url(../img/House_action.svg);
+  background-color: var(--color-transparent);
+  background-repeat: no-repeat;
+  border: 0;
+  margin-top: 10px;
+  background-position: center;
+  width: 110px;
+  height: 110px;
+}
 .navigation__keyboard {
   opacity: 0;
   width: 110px;
@@ -152,6 +161,16 @@ body {
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+}
+.click {
+  background-image: url(../img/keyboard_action.svg);
+  background-position: center;
+  width: 110px;
+  height: 110px;
+  background-color: var(--color-transparent);
+  background-repeat: no-repeat;
+  border: 0;
+  margin-top: 20px;
 }
 .container-main__neznayka {
   left: 5vh;
@@ -277,6 +296,123 @@ body {
   animation-delay: 9s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+}
+.container_keyboard {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px 30px 0px 0px;
+  border: 4px solid var(---black, #000);
+  background: #d9e5ea;
+  width: 95vw;
+  height: 63vh;
+  z-index: 99;
+}
+.keyboard_text {
+  display: flex;
+  margin-top: 20px;
+}
+.inputText {
+  padding-left: 15px;
+  outline: none;
+  width: 1117px;
+  height: 174px;
+
+  color: #000;
+  font-family: Shantell Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0px;
+  background-color: var(--color-transparent);
+  border: 0;
+  background-image: url(../img/OBJECTS\ text.png);
+}
+.inputSend {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url(../img/отправить.svg);
+  width: 71.127px;
+  height: 72.7px;
+  background-color: var(--color-transparent);
+  border: 0;
+  margin: 25px;
+  margin-top: 45px;
+}
+.inputClose {
+  margin-top: 5px;
+  background-image: url(../img/крестик.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-transparent);
+  border: 0;
+
+  width: 32.477px;
+  height: 28px;
+}
+
+#keyboard {
+}
+.key {
+  display: flex;
+  width: 83px;
+  height: 79px;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+
+  float: left;
+  border: 0.999px solid var(---white, #fff);
+  background: var(---dark-blue, #096084);
+
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36.307px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.key:nth-child(13) {
+  background-image: url(../img/back\ Key.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.keys:nth-child(13) {
+  background: #a1d77c;
+}
+
+.key:nth-child(27) {
+  background-image: url(../img/Arrow\ right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.key:nth-child(29) {
+  background-image: url(../img/Arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.key:nth-child(41) {
+  background-image: url(../img/Arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.key:last-child {
+  width: -webkit-fill-available;
+}
+.pressKey {
+  background: #a1d77c;
+}
+.clearfix {
+  width: 100%;
+  clear: both;
 }
 .hidden {
   display: none;

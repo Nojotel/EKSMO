@@ -9,6 +9,9 @@ const hello = document.querySelector(".hello_container");
 const main = document.querySelector(".container");
 const helloGIF = document.querySelector(".hello__gif");
 const timeHello = 6000;
+const input = document.querySelector(".container_keyboard");
+const inputClose = document.querySelector(".inputClose");
+const cursor = document.querySelector(".inputText");
 
 function start() {
   helloGIF.src = "./img/Book.gif";
@@ -75,6 +78,11 @@ function sizeMicro() {
   startMicro.classList.add("pulse");
 }
 setTimeout(sizeMicro, 10050 + timeHello);
+
+function stateNeznayka() {
+  neznayka.src = "./img/Незнайка в ожидании.gif";
+}
+setTimeout(stateNeznayka, 12050 + timeHello);
 
 class VoiceRecorder {
   constructor() {
@@ -164,7 +172,63 @@ async function senVoice(blob) {
   question.textContent = `${response.recognized_text}`;
   answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
   neznayka.src = "./img/wait-for-question-and-answer.gif";
+  function stateNeznayka() {
+    neznayka.src = "./img/Незнайка в ожидании.gif";
+  }
+  setTimeout(stateNeznayka, 7100);
 }
+
+const keyboardPress = [1081, 1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079, 1093, 1098, 8, 1092, 1099, 1074, 1072, 1087, 1088, 1086, 1083, 1076, 1078, 1101, 63, 13, 0, 1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073, 1102, 44, 46, 0, 32];
+function init() {
+  let out = "";
+  for (let i = 0; i < keyboardPress.length; i++) {
+    if (i === 12) {
+      out += `<div class='key' data=${keyboardPress[i]}"></div>`;
+    } else {
+      if (i === 13 || i === 26 || i === 39) {
+        out += `<div class='clearfix'></div>`;
+      }
+      out += `<div class='key' data=${keyboardPress[i]}>${String.fromCharCode(keyboardPress[i])}</div>`;
+    }
+  }
+
+  document.querySelector("#keyboard").innerHTML = out;
+}
+init();
+
+document.onkeypress = function (event) {
+  document.querySelectorAll("#keyboard .key").forEach(function (element) {
+    element.classList.remove("pressKey");
+  });
+  document.querySelector('#keyboard .key[data="' + event.keyCode + '"]').classList.add("pressKey");
+
+  function visibilityKeyboard() {
+    document.querySelector('#keyboard .key[data="' + event.keyCode + '"]').classList.remove("pressKey");
+  }
+  setTimeout(visibilityKeyboard, 500);
+};
+
+document.querySelectorAll("#keyboard .key").forEach((element) => {
+  const currentElement = element;
+
+  element.onclick = function (event) {
+    document.querySelectorAll("#keyboard .key").forEach((element) => {
+      element.classList.remove("pressKey");
+    });
+    let code = this.getAttribute("data");
+    console.log(code);
+    this.classList.add("pressKey");
+    cursor.value += this.textContent;
+    if (this.textContent === "") {
+      cursor.value = cursor.value.substring(0, cursor.value.length - 1);
+    }
+    function visibilityKeyboard() {
+      currentElement.classList.remove("pressKey");
+    }
+
+    setTimeout(visibilityKeyboard, 500);
+  };
+});
 
 const sendVoice = document.querySelector(".microphone_start");
 const stopVoice = document.querySelector(".microphone_stop");
@@ -184,6 +248,27 @@ stopVoice.addEventListener("click", function () {
 
 home.addEventListener("click", function () {
   startMicro.animationPlayPtate = "paused";
+});
+
+keyboard.addEventListener("click", function () {
+  input.classList.toggle("hidden");
+  keyboard.classList.toggle("click");
+  cursor.select();
+});
+
+home.addEventListener("click", function () {
+  home.classList.add("clear");
+  answerText.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
+  answerQuestion.textContent = "...";
+  function off() {
+    home.classList.remove("clear");
+  }
+  setTimeout(off, 500);
+});
+
+inputClose.addEventListener("click", function () {
+  input.classList.toggle("hidden");
+  keyboard.classList.toggle("click");
 });
 
 window.voiceRecorder = new VoiceRecorder();
