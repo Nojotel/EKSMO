@@ -219,9 +219,10 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
     console.log(code);
     this.classList.add("pressKey");
     cursor.value += this.textContent;
-    if (this.textContent === "") {
+    if (code === '8"') {
       cursor.value = cursor.value.substring(0, cursor.value.length - 1);
     }
+
     function visibilityKeyboard() {
       currentElement.classList.remove("pressKey");
     }
