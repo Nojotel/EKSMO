@@ -64,11 +64,6 @@ function visibilityNeznayka() {
 }
 setTimeout(visibilityNeznayka, 3050 + timeHello);
 
-function visibilityQuestionText() {
-  answerQuestion.classList.add("opacity");
-}
-setTimeout(visibilityQuestionText, 9050 + timeHello);
-
 function visibilityMicro() {
   startMicro.classList.add("opacity");
 }
@@ -300,9 +295,16 @@ const answer = document.querySelector(".neznayka__answer");
 const question = document.querySelector(".neznayka__question");
 
 sendVoice.addEventListener("click", function () {
+  input.classList.add("hidden");
+  keyboard.classList.remove("click");
+
   sendVoice.classList.add("hidden");
   stopVoice.classList.remove("hidden");
   //question.textContent = "Идет запись...";
+  function visibilityQuestionText() {
+    answerQuestion.classList.add("opacity");
+  }
+  setTimeout(visibilityQuestionText, 500);
   question.textContent = "";
   function visibilityAnswerText() {
     let text = `Идет запись...`;
@@ -354,7 +356,7 @@ home.addEventListener("click", function () {
   function off() {
     home.classList.remove("clear");
   }
-  setTimeout(off, 500);
+  setTimeout(off, 1000);
 });
 
 inputClose.addEventListener("click", function () {
