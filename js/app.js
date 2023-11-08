@@ -8,12 +8,12 @@ const startMicro = document.querySelector(".microphone_start");
 const hello = document.querySelector(".hello_container");
 const main = document.querySelector(".container");
 const helloGIF = document.querySelector(".hello__gif");
-const timeHello = 6000;
+const timeHello = 0;
 const input = document.querySelector(".container_keyboard");
 const inputClose = document.querySelector(".inputClose");
 const cursor = document.querySelector(".inputText");
 
-function start() {
+/*function start() {
   helloGIF.src = "./img/Book.gif";
 }
 start();
@@ -21,7 +21,7 @@ function visibilityHello() {
   hello.classList.add("hidden");
   main.classList.remove("hidden");
 }
-setTimeout(visibilityHello, timeHello);
+setTimeout(visibilityHello, timeHello);*/
 
 function visibilityStar() {
   star.classList.add("opacity");
@@ -31,12 +31,12 @@ setTimeout(visibilityStar, 2000 + timeHello);
 function visibilityHome() {
   home.classList.add("opacity");
 }
-setTimeout(visibilityHome, 2010 + timeHello);
+setTimeout(visibilityHome, 2000 + timeHello);
 
 function visibilityKeyboard() {
   keyboard.classList.add("opacity");
 }
-setTimeout(visibilityKeyboard, 2510 + timeHello);
+setTimeout(visibilityKeyboard, 2500 + timeHello);
 
 function visibilityAnswerText() {
   answerText.classList.add("opacity");
@@ -155,7 +155,26 @@ class VoiceRecorder {
     this.isRecording = false;
     this.recorderRef.pause();
     this.mediaRecorder.stop();
-    question.textContent = "Подожди, я думаю";
+    //question.textContent = "Подожди, я думаю";
+    question.textContent = "";
+    function visibilityAnswerText() {
+      let text = `Подожди, я думаю...`;
+      let delay = 40;
+      let elem = question;
+
+      let print_text = function (text, elem, delay) {
+        if (text.length > 0) {
+          elem.innerHTML += text[0];
+
+          setTimeout(function () {
+            print_text(text.slice(1), elem, delay);
+          }, delay);
+        }
+      };
+
+      print_text(text, elem, delay);
+    }
+    visibilityAnswerText();
   }
 }
 
@@ -169,13 +188,57 @@ async function senVoice(blob) {
   });
   let response = await promise.json();
   console.log(response.recognized_text);
-  question.textContent = `${response.recognized_text}`;
-  answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
+  //question.textContent = `${response.recognized_text}`;
+  //answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
+
+  question.textContent = ``;
+  function visibilityAnswerText1() {
+    let text = `${response.recognized_text}`;
+    let delay = 40;
+    let elem = question;
+
+    let print_text = function (text, elem, delay) {
+      if (text.length > 0) {
+        elem.innerHTML += text[0];
+
+        setTimeout(function () {
+          print_text(text.slice(1), elem, delay);
+        }, delay);
+      }
+    };
+
+    print_text(text, elem, delay);
+  }
+  visibilityAnswerText1();
+
+  answer.textContent = "";
+  function visibilityAnswerText2() {
+    let text = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
+    let delay = 40;
+    let elem = answer;
+
+    let print_text = function (text, elem, delay) {
+      if (text.length > 0) {
+        elem.innerHTML += text[0];
+
+        setTimeout(function () {
+          print_text(text.slice(1), elem, delay);
+        }, delay);
+      }
+    };
+
+    print_text(text, elem, delay);
+  }
+  visibilityAnswerText2();
   neznayka.src = "./img/wait-for-question-and-answer.gif";
   function stateNeznayka() {
     neznayka.src = "./img/Незнайка в ожидании.gif";
   }
   setTimeout(stateNeznayka, 7100);
+  answerQuestion.style.transform = "scale(0.8)";
+  answerText.style.backgroundImage = "url('../img/dialog-Незнайка-yellow.png')";
+  answerText.style.transform = "scale(1.2)";
+  answerQuestion.style.backgroundImage = "url('../img/dialog-user.png')";
 }
 
 const keyboardPress = [1081, 1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079, 1093, 1098, 8, 1092, 1099, 1074, 1072, 1087, 1088, 1086, 1083, 1076, 1078, 1101, 63, 13, 0, 1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073, 1102, 44, 46, 0, 32];
@@ -239,8 +302,31 @@ const question = document.querySelector(".neznayka__question");
 sendVoice.addEventListener("click", function () {
   sendVoice.classList.add("hidden");
   stopVoice.classList.remove("hidden");
-  question.textContent = "Идет запись...";
+  //question.textContent = "Идет запись...";
+  question.textContent = "";
+  function visibilityAnswerText() {
+    let text = `Идет запись...`;
+    let delay = 40;
+    let elem = question;
+
+    let print_text = function (text, elem, delay) {
+      if (text.length > 0) {
+        elem.innerHTML += text[0];
+
+        setTimeout(function () {
+          print_text(text.slice(1), elem, delay);
+        }, delay);
+      }
+    };
+
+    print_text(text, elem, delay);
+  }
+  visibilityAnswerText();
   answer.textContent = "...";
+  answerText.style.backgroundImage = "url('../img/dialog-Незнайка.png')";
+  answerQuestion.style.transform = "scale(1.2)";
+  answerText.style.transform = "scale(0.8)";
+  answerQuestion.style.backgroundImage = "url('../img/dialog-user-green.png')";
 });
 stopVoice.addEventListener("click", function () {
   stopVoice.classList.add("hidden");
@@ -260,7 +346,11 @@ keyboard.addEventListener("click", function () {
 home.addEventListener("click", function () {
   home.classList.add("clear");
   answerText.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
-  answerQuestion.textContent = "...";
+  answerQuestion.style.transform = "scale(1)";
+  answerText.style.backgroundImage = "url('../img/dialog-Незнайка.png')";
+  answerText.style.transform = "scale(1)";
+  answerQuestion.style.backgroundImage = "url('../img/dialog-user.png')";
+  question.textContent = "...";
   function off() {
     home.classList.remove("clear");
   }

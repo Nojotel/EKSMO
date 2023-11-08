@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 :root {
-  --color-background: #096084;
+  --color-background: #024561;
   --color-transparent: rgba(28, 28, 28, 0);
 }
 button {
@@ -34,6 +34,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-position: bottom left;
+  background-size: 77vw;
 }
 .container-main {
   display: flex;
@@ -51,34 +52,72 @@ body {
   animation-iteration-count: 1;
   animation-delay: 1s;
   animation-timing-function: linear;
+  z-index: -6;
 }
 .stars1 {
-  width: 50px;
-  height: 50px;
+  width: 106px;
+  height: 106px;
   background: url(../img/Star\ 6.svg);
   background-repeat: no-repeat;
+  background-position: center;
   position: fixed;
-  top: 13%;
-  left: 33%;
+  top: 12.6vh;
+  left: 32.7vw;
+  z-index: -6;
+}
+.stars1_blur {
+  width: 120px;
+  height: 120px;
+  background: url(../img/Star\ 6\ blur.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 12.6vh;
+  left: 32.7vw;
   animation-name: stars;
   animation-duration: 2.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: -6;
 }
-.stars2 {
-  width: 50px;
-  height: 50px;
-  background: url(../img/Star\ 2.svg);
+.stars2_blur {
+  width: 120px;
+  height: 120px;
+  background: url(../img/Star\ 2\ blur.svg);
   background-repeat: no-repeat;
+  background-position: center;
   position: fixed;
   top: 9%;
   left: 72%;
   animation-name: stars;
-  animation-duration: 1.5s;
+  animation-duration: 2.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: -6;
+  filter: blur(10px);
+}
+.stars2 {
+  width: 106px;
+  height: 106px;
+  background: url(../img/Star\ 2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 9%;
+  left: 72%;
+  z-index: -6;
 }
 .stars3 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 1.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 39%;
+  left: 38%;
+  z-index: -6;
+}
+.stars3_blur {
   width: 50px;
   height: 50px;
   background: url(../img/Star\ 1.svg);
@@ -90,11 +129,23 @@ body {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: -6;
+  filter: blur(10px);
 }
 .stars4 {
   width: 50px;
   height: 50px;
-  background: url(../img/Star\ 3.svg);
+  background: url(../img/Star\ 4.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 32%;
+  left: 82%;
+  z-index: -6;
+}
+.stars4_blur {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 4.svg);
   background-repeat: no-repeat;
   position: fixed;
   top: 32%;
@@ -103,8 +154,20 @@ body {
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: -6;
+  filter: blur(10px);
 }
 .stars5 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/Star\ 7.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 67%;
+  left: 72%;
+  z-index: -6;
+}
+.stars5_blur {
   width: 50px;
   height: 50px;
   background: url(../img/Star\ 7.svg);
@@ -116,6 +179,40 @@ body {
   animation-duration: 2.3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: -6;
+  filter: blur(10px);
+}
+
+.comet {
+  width: 50vw;
+  height: 50vh;
+  background: url(../img/Комета.gif);
+  background-repeat: no-repeat;
+  position: fixed;
+  right: -67vw;
+  top: -43vh;
+  animation-name: cometFly;
+  animation-duration: 30s;
+  animation-delay: 25s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  z-index: -5;
+}
+
+.ufo {
+  width: 50vw;
+  height: 50vh;
+  background: url(../img/UFO.gif);
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 38vw;
+  top: -65vh;
+  animation-name: ufoFly;
+  animation-duration: 40s;
+  animation-delay: 10s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  z-index: -5;
 }
 
 .container-main__navigation {
@@ -124,18 +221,21 @@ body {
 }
 .navigation__home {
   opacity: 0;
-  width: 110px;
-  height: 110px;
+  width: 10vw;
+  height: 13vh;
   background-image: url(../img/House.svg);
   background-color: var(--color-transparent);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border: 0;
   margin-top: 10px;
   animation-name: size;
   animation-duration: 1s;
-  animation-delay: 2s;
+  animation-delay: 1.9s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+  z-index: 5;
 }
 .clear {
   background-image: url(../img/House_action.svg);
@@ -144,33 +244,35 @@ body {
   border: 0;
   margin-top: 10px;
   background-position: center;
-  width: 110px;
-  height: 110px;
+  width: 10vw;
+  height: 13vh;
 }
 .navigation__keyboard {
   opacity: 0;
-  width: 110px;
-  height: 110px;
+  width: 10vw;
+  height: 13vh;
   background-image: url(../img/keyboard.svg);
   background-color: var(--color-transparent);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border: 0;
   margin-top: 20px;
   animation-name: size;
-  animation-delay: 2.5s;
+  animation-delay: 2.4s;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+  z-index: 5;
 }
 .click {
   background-image: url(../img/keyboard_action.svg);
   background-position: center;
-  width: 110px;
-  height: 110px;
+  width: 10vw;
+  height: 13vh;
   background-color: var(--color-transparent);
   background-repeat: no-repeat;
   border: 0;
-  margin-top: 20px;
 }
 .container-main__neznayka {
   left: 5vh;
@@ -178,18 +280,19 @@ body {
   display: flex;
   justify-content: space-between;
   width: 84vw;
+  height: 84vh;
 }
 .neznayka__image {
   opacity: 0;
   position: relative;
-  bottom: 23vh;
-  left: 0vw;
-  width: 600px;
-  height: 600px;
+  bottom: 12vh;
+  left: -3vw;
+  width: 48vw;
+  height: 90vh;
   animation-name: visibility;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  animation-delay: 3s;
+  animation-delay: 2.9s;
   animation-timing-function: linear;
 }
 .microphone_start {
@@ -198,50 +301,54 @@ body {
   background-repeat: no-repeat;
   background-position: left top, bottom right;
   background-color: var(--color-transparent);
+  background-size: 8vw;
   border: 0;
-  width: 144px;
-  height: 200px;
+  width: 11.5vw;
+  height: 30vh;
   position: fixed;
-  bottom: -5px;
-  right: 30px;
+  bottom: 0vw;
+  right: 0vh;
 
   animation-name: visibilityMicro;
   animation-duration: 1s;
-  animation-delay: 9s;
+  animation-delay: 8.9s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
 .microphone_stop {
   background-color: var(--color-transparent);
+  background-size: 8vw;
   border: 0;
-  width: 144px;
-  height: 200px;
+  width: 11.5vw;
+  height: 30vh;
   position: fixed;
-  bottom: -5px;
-  right: 30px;
+  bottom: 0vw;
+  right: 0vh;
 }
 .microphone_handle {
   background-image: url(../img/microphone_handle.svg);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: right bottom;
+  background-size: 8vw;
   border: 0;
-  width: 144px;
-  height: 144px;
+  width: 11.5vw;
+  height: 30vh;
   position: fixed;
-  bottom: -5px;
-  right: 30px;
+  bottom: 0vw;
+  right: 0vh;
 }
 .microphone_earth {
   background-image: url(../img/microphone_earth.svg);
   background-repeat: no-repeat;
   background-position: left top;
   background-color: var(--color-transparent);
+  background-size: 8vw;
   border: 0;
-  width: 95px;
-  height: 95px;
+  width: 8.5vw;
+  height: 8.5vw;
   position: fixed;
-  bottom: 100px;
-  right: 80px;
+  bottom: 15vh;
+  right: 3vw;
   animation-name: rotate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -253,23 +360,26 @@ body {
   opacity: 0;
   background-image: url(../img/dialog-Незнайка.png);
   background-repeat: no-repeat;
-  width: 470px;
-  height: 242px;
-  position: relative;
-  right: 16vw;
-  bottom: 25vh;
+  background-size: contain;
+  width: 30vw;
+  height: 31vh;
+  position: fixed;
+  right: 29vw;
+  bottom: 57vh;
 
   color: #000;
   font-family: Shantell Sans;
-  font-size: 28px;
+  font-size: calc(37px + 43 * (100vw / 3840));
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 40px;
+  padding-left: 2vw;
+  padding-top: 2vw;
+  padding-right: 3vw;
 
   animation-name: sizeText;
   animation-duration: 1s;
-  animation-delay: 8s;
+  animation-delay: 7.9s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
@@ -277,32 +387,49 @@ body {
   opacity: 0;
   background-image: url(../img/dialog-user.png);
   background-repeat: no-repeat;
-  width: 470px;
-  height: 242px;
+  background-size: contain;
+  width: 30vw;
+  height: 30vh;
   position: fixed;
-  bottom: 38vh;
-  left: 56vw;
+  right: 13vw;
+  bottom: 31vh;
 
   color: #000;
   font-family: Shantell Sans;
-  font-size: 28px;
+  /*font-size: 80px;*/
+  font-size: calc(37px + 43 * (100vw / 3840));
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 40px;
+  padding-left: 2vw;
+  padding-top: 2vw;
+  padding-right: 3vw;
 
   animation-name: sizeTextQuestion;
   animation-duration: 1s;
-  animation-delay: 9s;
+  animation-delay: 8.9s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+}
+@media (max-width: 1920px) {
+  .neznayka__question {
+    font-size: calc(37px + (43 + 43 * 0.7) * ((100vw - 1920px) / 3840));
+  }
+  .neznayka__answer {
+    font-size: calc(37px + (43 + 43 * 0.7) * ((100vw - 1920px) / 3840));
+  }
+}
+@media (max-height: 980px) {
+  .microphone_start {
+    height: 33vh;
+  }
 }
 .container_keyboard {
   position: fixed;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   border-radius: 30px 30px 0px 0px;
   border: 4px solid var(---black, #000);
@@ -366,7 +493,11 @@ body {
   margin: 8px;
 
   float: left;
-  border: 0.999px solid var(---white, #fff);
+  border-left: 5px solid #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 1px solid #000;
+  border-radius: 50%;
   background: var(---dark-blue, #096084);
 
   color: #fff;
@@ -406,9 +537,11 @@ body {
 }
 .key:last-child {
   width: -webkit-fill-available;
+  border-radius: 25px;
 }
 .pressKey {
-  background: #a1d77c;
+  background: #f9ef6c;
+  color: #000;
 }
 .clearfix {
   width: 100%;
@@ -438,22 +571,13 @@ body {
 }
 @keyframes stars {
   0% {
-    background-position: 0% 0%;
+    opacity: 0;
   }
-  20% {
-    background-position: 75% 75%;
-  }
-  40% {
-    background-position: 50% 50%;
-  }
-  60% {
-    background-position: 30% 90%;
-  }
-  80% {
-    background-position: 75% 25%;
+  50% {
+    opacity: 1;
   }
   100% {
-    background-position: 0% 0%;
+    opacity: 0;
   }
 }
 @keyframes visibility {
@@ -478,47 +602,47 @@ body {
 @keyframes sizeText {
   0% {
     transform: scale(0);
-    right: 25vw;
+    right: 44vw;
     bottom: 15vh;
   }
   80% {
     transform: scale(1.1);
-    right: 16vw;
-    bottom: 25vh;
+    right: 29vw;
+    bottom: 57vh;
   }
   100% {
     transform: scale(1);
-    right: 16vw;
-    bottom: 25vh;
+    right: 29vw;
+    bottom: 57vh;
   }
 }
 @keyframes sizeTextQuestion {
   0% {
     transform: scale(0);
-    bottom: 20vh;
-    left: 70vw;
+    bottom: 4vh;
+    right: -21vw;
   }
   80% {
     transform: scale(1.1);
-    bottom: 38vh;
-    left: 56vw;
+    right: 13vw;
+    bottom: 31vh;
   }
   100% {
     transform: scale(1);
-    bottom: 38vh;
-    left: 56vw;
+    right: 13vw;
+    bottom: 31vh;
   }
 }
 @keyframes visibilityMicro {
   0% {
     transform: scale(0);
-    bottom: -100px;
-    right: -30px;
+    bottom: -15vw;
+    right: -15vh;
   }
   100% {
     transform: scale(1);
-    bottom: -5px;
-    right: 30px;
+    bottom: 0vw;
+    right: 0vh;
   }
 }
 @keyframes sizeMicro {
@@ -532,6 +656,83 @@ body {
     transform: scale(1);
   }
 }
+@keyframes cometFly {
+  0% {
+    right: -67vwvw;
+    top: -43vh;
+  }
+  10% {
+    right: 74vw;
+    top: 95vh;
+  }
+  100% {
+    right: 74vw;
+    top: 95vh;
+  }
+}
+@keyframes ufoFly {
+  0% {
+    right: 38vw;
+    top: -65vh;
+  }
+  2% {
+    right: 20vw;
+    top: 16vh;
+  }
+  4% {
+    right: 14vw;
+    top: 21vh;
+  }
+  6% {
+    right: -1vw;
+    top: 26vh;
+  }
+  8% {
+    right: -23vw;
+    top: 12vh;
+  }
+  10% {
+    right: -22vw;
+    top: 6vh;
+  }
+  12% {
+    right: -20vw;
+    top: 4vh;
+  }
+  14% {
+    right: -3vw;
+    top: -3vh;
+  }
+  16% {
+    right: 13vw;
+    top: 1vh;
+  }
+  18% {
+    right: 17vw;
+    top: 26vh;
+  }
+  20% {
+    right: 2vw;
+    top: 39vh;
+  }
+  22% {
+    right: -18vw;
+    top: 28vh;
+  }
+  24% {
+    right: -36vw;
+    top: 44vh;
+  }
+  26% {
+    right: -53vw;
+    top: 53vh;
+  }
+  100% {
+    right: -53vw;
+    top: 53vh;
+  }
+}
+
 /*.container {
   display: flex;
   flex-direction: column;
