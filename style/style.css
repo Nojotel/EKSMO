@@ -775,6 +775,7 @@ body {
   }
   .container_keyboard {
     height: 57vh;
+    width: 80vw;
   }
 }
 @media (min-width: 3500px) {
