@@ -767,6 +767,8 @@ body {
   }
   .container_keyboard {
     height: 65vh;
+    width: 80vw;
+    left: 9%;
   }
 }
 @media (min-height: 1080px) {
@@ -775,7 +777,6 @@ body {
   }
   .container_keyboard {
     height: 57vh;
-    width: 80vw;
   }
 }
 @media (min-width: 3500px) {
