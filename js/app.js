@@ -231,9 +231,9 @@ async function senVoice(blob) {
   }
   setTimeout(stateNeznayka, 7100);
   answerQuestion.style.transform = "scale(0.8)";
-  answerText.style.backgroundImage = "url('../img/dialog-Незнайка-yellow.png')";
+  answerText.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
   answerText.style.transform = "scale(1.2)";
-  answerQuestion.style.backgroundImage = "url('../img/dialog-user.png')";
+  answerQuestion.style.backgroundImage = "url('./img/dialog-user.png')";
 }
 
 const keyboardPress = [1081, 1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079, 1093, 1098, 8, 1092, 1099, 1074, 1072, 1087, 1088, 1086, 1083, 1076, 1078, 1101, 63, 13, 0, 1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073, 1102, 44, 46, 0, 32];
@@ -325,10 +325,10 @@ sendVoice.addEventListener("click", function () {
   }
   visibilityAnswerText();
   answer.textContent = "...";
-  answerText.style.backgroundImage = "url('../img/dialog-Незнайка.png')";
+  answerText.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
   answerQuestion.style.transform = "scale(1.2)";
   answerText.style.transform = "scale(0.8)";
-  answerQuestion.style.backgroundImage = "url('../img/dialog-user-green.png')";
+  answerQuestion.style.backgroundImage = "url('./img/dialog-user-green.png')";
 });
 stopVoice.addEventListener("click", function () {
   stopVoice.classList.add("hidden");
@@ -349,9 +349,9 @@ home.addEventListener("click", function () {
   home.classList.add("clear");
   answerText.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
   answerQuestion.style.transform = "scale(1)";
-  answerText.style.backgroundImage = "url('../img/dialog-Незнайка.png')";
+  answerText.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
   answerText.style.transform = "scale(1)";
-  answerQuestion.style.backgroundImage = "url('../img/dialog-user.png')";
+  answerQuestion.style.backgroundImage = "url('./img/dialog-user.png')";
   question.textContent = "...";
   function off() {
     home.classList.remove("clear");
