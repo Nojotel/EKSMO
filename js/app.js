@@ -12,6 +12,7 @@ const timeHello = 0;
 const input = document.querySelector(".container_keyboard");
 const inputClose = document.querySelector(".inputClose");
 const cursor = document.querySelector(".inputText");
+const inputSendBut = document.querySelector(".inputSend");
 
 /*function start() {
   helloGIF.src = "./img/Book.gif";
@@ -172,7 +173,6 @@ class VoiceRecorder {
     visibilityAnswerText();
   }
 }
-
 async function senVoice(blob) {
   let formData = new FormData();
   formData.append("audio", blob);
@@ -264,6 +264,35 @@ document.onkeypress = function (event) {
     document.querySelector('#keyboard .key[data="' + event.keyCode + '"]').classList.remove("pressKey");
   }
   setTimeout(visibilityKeyboard, 500);
+  if (event.charCode == 13) {
+    input.classList.add("hidden");
+    keyboard.classList.remove("click");
+    answerText.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
+    answerQuestion.style.transform = "scale(1.2)";
+    answerText.style.transform = "scale(0.8)";
+    answerQuestion.style.backgroundImage = "url('./img/dialog-user-green.png')";
+    question.textContent = cursor.value;
+    async function sendText(blob) {
+      blob = cursor.value;
+      let formData = new FormData();
+      formData.append("text", blob);
+      console.log(blob);
+      let promise = await fetch("https://farm.pythonanywhere.com/uploadText/", {
+        method: "POST",
+        body: formData,
+      });
+      let response = await promise.json();
+      console.log(response);
+    }
+    sendText();
+    answerQuestion.style.opacity = "100";
+    answerQuestion.style.transform = "scale(0.8)";
+    answerText.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
+    answerText.style.transform = "scale(1.2)";
+    answerQuestion.style.backgroundImage = "url('./img/dialog-user.png')";
+    cursor.value = "";
+    answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
+  }
 };
 
 document.querySelectorAll("#keyboard .key").forEach((element) => {
@@ -286,6 +315,35 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
     }
 
     setTimeout(visibilityKeyboard, 500);
+    if (code == 13) {
+      input.classList.add("hidden");
+      keyboard.classList.remove("click");
+      answerText.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
+      answerQuestion.style.transform = "scale(1.2)";
+      answerText.style.transform = "scale(0.8)";
+      answerQuestion.style.backgroundImage = "url('./img/dialog-user-green.png')";
+      question.textContent = cursor.value;
+      async function sendText(blob) {
+        blob = cursor.value;
+        let formData = new FormData();
+        formData.append("text", blob);
+        console.log(blob);
+        let promise = await fetch("https://farm.pythonanywhere.com/uploadText/", {
+          method: "POST",
+          body: formData,
+        });
+        let response = await promise.json();
+        console.log(response);
+      }
+      sendText();
+      answerQuestion.style.opacity = "100";
+      answerQuestion.style.transform = "scale(0.8)";
+      answerText.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
+      answerText.style.transform = "scale(1.2)";
+      answerQuestion.style.backgroundImage = "url('./img/dialog-user.png')";
+      cursor.value = "";
+      answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
+    }
   };
 });
 
@@ -340,9 +398,13 @@ home.addEventListener("click", function () {
 });
 
 keyboard.addEventListener("click", function () {
-  input.classList.toggle("hidden");
-  keyboard.classList.toggle("click");
-  cursor.select();
+  if (startMicro.classList.contains("hidden")) {
+    return;
+  } else {
+    input.classList.toggle("hidden");
+    keyboard.classList.toggle("click");
+    cursor.select();
+  }
 });
 
 home.addEventListener("click", function () {
@@ -362,6 +424,36 @@ home.addEventListener("click", function () {
 inputClose.addEventListener("click", function () {
   input.classList.toggle("hidden");
   keyboard.classList.toggle("click");
+});
+
+inputSendBut.addEventListener("click", async function () {
+  input.classList.add("hidden");
+  keyboard.classList.remove("click");
+  answerText.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
+  answerQuestion.style.transform = "scale(1.2)";
+  answerText.style.transform = "scale(0.8)";
+  answerQuestion.style.backgroundImage = "url('./img/dialog-user-green.png')";
+  question.textContent = cursor.value;
+  async function sendText(blob) {
+    blob = cursor.value;
+    let formData = new FormData();
+    formData.append("text", blob);
+    console.log(blob);
+    let promise = await fetch("https://farm.pythonanywhere.com/uploadText/", {
+      method: "POST",
+      body: formData,
+    });
+    let response = await promise.json();
+    console.log(response);
+  }
+  sendText();
+  answerQuestion.style.opacity = "100";
+  answerQuestion.style.transform = "scale(0.8)";
+  answerText.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
+  answerText.style.transform = "scale(1.2)";
+  answerQuestion.style.backgroundImage = "url('./img/dialog-user.png')";
+  cursor.value = "";
+  answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
 });
 
 window.voiceRecorder = new VoiceRecorder();
