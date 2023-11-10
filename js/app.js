@@ -2,6 +2,7 @@ const home = document.querySelector(".navigation__home");
 const keyboard = document.querySelector(".navigation__keyboard");
 const star = document.querySelector(".star");
 const neznayka = document.querySelector(".neznayka__image");
+const shrek = document.querySelector(".shrek");
 const answerText = document.querySelector(".neznayka__answer");
 const answerQuestion = document.querySelector(".neznayka__question");
 const answerBlob = document.querySelector(".answer_blob");
@@ -81,6 +82,16 @@ function stateNeznayka() {
   neznayka.src = "./img/Незнайка в ожидании.gif";
 }
 setTimeout(stateNeznayka, 12050 + timeHello);
+function visibilityShrek() {
+  shrek.src = "./img/new_alien_smile_ex_2.gif";
+  shrek.classList.add("opacity");
+}
+setTimeout(visibilityShrek, 18000 + timeHello);
+
+function noVisibilityShrek() {
+  shrek.classList.remove("opacity");
+}
+setTimeout(noVisibilityShrek, 24400 + timeHello);
 
 class VoiceRecorder {
   constructor() {
