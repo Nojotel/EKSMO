@@ -52,7 +52,7 @@ body {
   animation-iteration-count: 1;
   animation-delay: 1s;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 0;
 }
 .stars1 {
   width: 106px;
@@ -725,15 +725,14 @@ body {
   opacity: 0;
   position: absolute;
   bottom: 12vh;
-  left: 5vw;
-  top: 0;
+  left: 35vw;
+  bottom: 0;
   width: 20vw;
   height: 20vh;
   animation-name: visibility;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  transform: rotate(180deg);
 }
 .container-main__navigation {
   display: flex;
@@ -1191,7 +1190,7 @@ body {
   }
   100% {
     right: 74vw;
-    top: 95vh;
+    top: 114vh;
   }
 }
 @keyframes ufoFly {
