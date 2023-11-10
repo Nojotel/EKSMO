@@ -52,7 +52,7 @@ body {
   animation-iteration-count: 1;
   animation-delay: 1s;
   animation-timing-function: linear;
-  z-index: 0;
+  z-index: -6;
 }
 .stars1 {
   width: 106px;
@@ -64,7 +64,7 @@ body {
   position: fixed;
   top: 13.6vh;
   left: 31.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars1_blur {
   width: 106px;
@@ -80,7 +80,7 @@ body {
   animation-duration: 2.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars2 {
   width: 106px;
@@ -92,7 +92,7 @@ body {
   position: fixed;
   top: 5.6vh;
   left: 36.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars2_blur {
   width: 106px;
@@ -108,7 +108,7 @@ body {
   animation-duration: 2.4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars3 {
   width: 106px;
@@ -120,7 +120,7 @@ body {
   position: fixed;
   top: 8.6vh;
   left: 40.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars3_blur {
   width: 106px;
@@ -136,7 +136,7 @@ body {
   animation-duration: 2.1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars4 {
   width: 106px;
@@ -148,7 +148,7 @@ body {
   position: fixed;
   top: 15.6vh;
   left: 43.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars4_blur {
   width: 106px;
@@ -164,7 +164,7 @@ body {
   animation-duration: 2.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars5 {
   width: 106px;
@@ -176,7 +176,7 @@ body {
   position: fixed;
   top: 11.6vh;
   left: 47.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars5_blur {
   width: 106px;
@@ -192,7 +192,7 @@ body {
   animation-duration: 2.3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars6 {
   width: 106px;
@@ -204,7 +204,7 @@ body {
   position: fixed;
   top: 12.6vh;
   left: 51.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars6_blur {
   width: 106px;
@@ -220,7 +220,7 @@ body {
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars7 {
   width: 106px;
@@ -232,7 +232,7 @@ body {
   position: fixed;
   top: 7.6vh;
   left: 54.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars7_blur {
   width: 106px;
@@ -248,7 +248,7 @@ body {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars8 {
   width: 106px;
@@ -260,7 +260,7 @@ body {
   position: fixed;
   top: 11.6vh;
   left: 58.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars8_blur {
   width: 106px;
@@ -276,7 +276,7 @@ body {
   animation-duration: 2.35s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars9 {
   width: 106px;
@@ -288,7 +288,7 @@ body {
   position: fixed;
   top: 8.6vh;
   left: 62.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars9_blur {
@@ -305,7 +305,7 @@ body {
   animation-duration: 2.25s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars10 {
@@ -318,7 +318,7 @@ body {
   position: fixed;
   top: 4.6vh;
   left: 66.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars10_blur {
@@ -335,7 +335,7 @@ body {
   animation-duration: 2.15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars11 {
@@ -348,7 +348,7 @@ body {
   position: fixed;
   top: 8.6vh;
   left: 70.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars11_blur {
@@ -365,7 +365,7 @@ body {
   animation-duration: 2.45s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars12 {
@@ -378,7 +378,7 @@ body {
   position: fixed;
   top: 16.6vh;
   left: 72.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars12_blur {
@@ -395,7 +395,7 @@ body {
   animation-duration: 2.35s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars13 {
@@ -408,7 +408,7 @@ body {
   position: fixed;
   top: 19.6vh;
   left: 76.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars13_blur {
@@ -425,7 +425,7 @@ body {
   animation-duration: 2.25s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars14 {
@@ -438,7 +438,7 @@ body {
   position: fixed;
   top: 24.6vh;
   left: 81.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars14_blur {
@@ -455,7 +455,7 @@ body {
   animation-duration: 2.15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars15 {
@@ -468,7 +468,7 @@ body {
   position: fixed;
   top: 17.6vh;
   left: 86.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars15_blur {
@@ -485,7 +485,7 @@ body {
   animation-duration: 1.9s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars16 {
@@ -498,7 +498,7 @@ body {
   position: fixed;
   top: 33.6vh;
   left: 94.3vw;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars16_blur {
@@ -515,7 +515,7 @@ body {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
   transform: rotate(45deg);
 }
 .stars17 {
@@ -528,7 +528,7 @@ body {
   position: fixed;
   top: 2.6vh;
   left: 75.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars17_blur {
   width: 106px;
@@ -544,7 +544,7 @@ body {
   animation-duration: 2.05s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars18 {
   width: 106px;
@@ -556,7 +556,7 @@ body {
   position: fixed;
   top: 43.6vh;
   left: 86.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars18_blur {
   width: 106px;
@@ -572,7 +572,7 @@ body {
   animation-duration: 2.25s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars19 {
   width: 106px;
@@ -584,7 +584,7 @@ body {
   position: fixed;
   top: 29.6vh;
   left: 69.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars19_blur {
   width: 106px;
@@ -600,7 +600,7 @@ body {
   animation-duration: 2.18s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars20 {
   width: 106px;
@@ -612,7 +612,7 @@ body {
   position: fixed;
   top: 24.6vh;
   left: 65.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars20_blur {
   width: 106px;
@@ -628,7 +628,7 @@ body {
   animation-duration: 2.13s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars21 {
   width: 106px;
@@ -640,7 +640,7 @@ body {
   position: fixed;
   top: 23.6vh;
   left: 52.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars21_blur {
   width: 106px;
@@ -656,7 +656,7 @@ body {
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .stars22 {
   width: 106px;
@@ -668,7 +668,7 @@ body {
   position: fixed;
   top: 27.6vh;
   left: 45.3vw;
-  z-index: -6;
+  z-index: 5;
 }
 .stars22_blur {
   width: 106px;
@@ -684,7 +684,7 @@ body {
   animation-duration: 2.4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  z-index: -6;
+  z-index: 5;
 }
 .comet {
   width: 50vw;
@@ -717,7 +717,7 @@ body {
   animation-delay: 10s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  z-index: -5;
+  z-index: -6;
 }
 
 .shrek {
@@ -753,7 +753,7 @@ body {
   animation-delay: 1.9s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  z-index: 5;
+  z-index: 8;
 }
 .clear {
   background-image: url(../img/House_action.svg), url(../img/blur.svg);
@@ -779,7 +779,7 @@ body {
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
-  z-index: 5;
+  z-index: 8;
 }
 .click {
   background-image: url(../img/keyboard_action.svg), url(../img/blur.svg);
@@ -958,7 +958,7 @@ body {
   background: #d9e5ea;
   width: 95vw;
   height: 63vh;
-  z-index: 99;
+  z-index: 88;
 }
 .keyboard_text {
   display: flex;
