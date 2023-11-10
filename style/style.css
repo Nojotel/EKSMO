@@ -725,7 +725,7 @@ body {
   opacity: 0;
   position: absolute;
   bottom: 12vh;
-  left: 40vw;
+  left: 5vw;
   top: 0;
   width: 20vw;
   height: 20vh;
@@ -872,7 +872,6 @@ body {
   animation-timing-function: linear;
 }
 .neznayka__text {
-  display: none;
 }
 
 .neznayka__answer {
