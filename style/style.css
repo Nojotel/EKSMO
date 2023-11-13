@@ -55,27 +55,27 @@ body {
   z-index: -6;
 }
 .stars1 {
-  width: 106px;
-  height: 106px;
+  width: 39px;
+  height: 42px;
   background: url(../img/star1.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 13.6vh;
-  left: 31.3vw;
+  top: 44.6vh;
+  left: 40.3vw;
   z-index: 5;
 }
 .stars1_blur {
-  width: 106px;
-  height: 106px;
+  width: 39px;
+  height: 42px;
   background: url(../img/star1blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 13.6vh;
-  left: 31.3vw;
+  top: 44.6vh;
+  left: 40.3vw;
   animation-name: stars;
   animation-duration: 2.2s;
   animation-iteration-count: infinite;
@@ -83,27 +83,27 @@ body {
   z-index: 5;
 }
 .stars2 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 39px;
+  height: 38px;
+  background: url(../img/star2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 5.6vh;
-  left: 36.3vw;
+  top: 36.6vh;
+  left: 49.3vw;
   z-index: 5;
 }
 .stars2_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 39px;
+  height: 38px;
+  background: url(../img/star2blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 5.6vh;
-  left: 36.3vw;
+  top: 36.6vh;
+  left: 49.3vw;
   animation-name: stars;
   animation-duration: 2.4s;
   animation-iteration-count: infinite;
@@ -111,27 +111,27 @@ body {
   z-index: 5;
 }
 .stars3 {
-  width: 106px;
-  height: 106px;
+  width: 39px;
+  height: 38px;
   background: url(../img/star2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 8.6vh;
-  left: 40.3vw;
+  top: 35.6vh;
+  left: 58.3vw;
   z-index: 5;
 }
 .stars3_blur {
-  width: 106px;
-  height: 106px;
+  width: 39px;
+  height: 38px;
   background: url(../img/star2blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 8.6vh;
-  left: 40.3vw;
+  top: 35.6vh;
+  left: 58.3vw;
   animation-name: stars;
   animation-duration: 2.1s;
   animation-iteration-count: infinite;
@@ -139,27 +139,27 @@ body {
   z-index: 5;
 }
 .stars4 {
-  width: 106px;
-  height: 106px;
+  width: 39px;
+  height: 38px;
   background: url(../img/star2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 15.6vh;
-  left: 43.3vw;
+  top: 29.6vh;
+  left: 64.3vw;
   z-index: 5;
 }
 .stars4_blur {
-  width: 106px;
-  height: 106px;
+  width: 39px;
+  height: 38px;
   background: url(../img/star2blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 15.6vh;
-  left: 43.3vw;
+  top: 29.6vh;
+  left: 64.3vw;
   animation-name: stars;
   animation-duration: 2.2s;
   animation-iteration-count: infinite;
@@ -167,27 +167,27 @@ body {
   z-index: 5;
 }
 .stars5 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 39px;
+  height: 38px;
+  background: url(../img/star2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 11.6vh;
-  left: 47.3vw;
+  top: 33.6vh;
+  left: 68.3vw;
   z-index: 5;
 }
 .stars5_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 39px;
+  height: 38px;
+  background: url(../img/star2blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 11.6vh;
-  left: 47.3vw;
+  top: 33.6vh;
+  left: 68.3vw;
   animation-name: stars;
   animation-duration: 2.3s;
   animation-iteration-count: infinite;
@@ -195,27 +195,27 @@ body {
   z-index: 5;
 }
 .stars6 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 39px;
+  height: 38px;
+  background: url(../img/star2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 12.6vh;
-  left: 51.3vw;
+  top: 3.6vh;
+  left: 72.3vw;
   z-index: 5;
 }
 .stars6_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 39px;
+  height: 38px;
+  background: url(../img/star2blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 12.6vh;
-  left: 51.3vw;
+  top: 3.6vh;
+  left: 72.3vw;
   animation-name: stars;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -230,8 +230,8 @@ body {
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 7.6vh;
-  left: 54.3vw;
+  top: 41.6vh;
+  left: 95.3vw;
   z-index: 5;
 }
 .stars7_blur {
@@ -242,8 +242,8 @@ body {
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 7.6vh;
-  left: 54.3vw;
+  top: 41.6vh;
+  left: 95.3vw;
   animation-name: stars;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -251,27 +251,27 @@ body {
   z-index: 5;
 }
 .stars8 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star2.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
   top: 11.6vh;
-  left: 58.3vw;
+  left: 59.3vw;
   z-index: 5;
 }
 .stars8_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star2blur.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
   top: 11.6vh;
-  left: 58.3vw;
+  left: 59.3vw;
   animation-name: stars;
   animation-duration: 2.35s;
   animation-iteration-count: infinite;
@@ -279,409 +279,197 @@ body {
   z-index: 5;
 }
 .stars9 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
   top: 8.6vh;
-  left: 62.3vw;
+  left: 63.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars9_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
   top: 8.6vh;
-  left: 62.3vw;
+  left: 63.3vw;
   animation-name: stars;
   animation-duration: 2.25s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars10 {
   width: 106px;
   height: 106px;
-  background: url(../img/star1.svg);
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 4.6vh;
+  top: 13.6vh;
   left: 66.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars10_blur {
   width: 106px;
   height: 106px;
-  background: url(../img/star1blur.svg);
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 4.6vh;
+  top: 13.6vh;
   left: 66.3vw;
   animation-name: stars;
   animation-duration: 2.15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars11 {
   width: 106px;
   height: 106px;
-  background: url(../img/star2.svg);
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 8.6vh;
-  left: 70.3vw;
+  top: 22.6vh;
+  left: 67.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars11_blur {
   width: 106px;
   height: 106px;
-  background: url(../img/star2blur.svg);
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 8.6vh;
-  left: 70.3vw;
+  top: 22.6vh;
+  left: 67.3vw;
   animation-name: stars;
   animation-duration: 2.45s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars12 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star2.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 16.6vh;
-  left: 72.3vw;
+  top: 23.6vh;
+  left: 71.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars12_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star2blur.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 16.6vh;
-  left: 72.3vw;
+  top: 23.6vh;
+  left: 71.3vw;
   animation-name: stars;
   animation-duration: 2.35s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars13 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 19.6vh;
-  left: 76.3vw;
+  top: 25.6vh;
+  left: 74.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars13_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 19.6vh;
-  left: 76.3vw;
+  top: 25.6vh;
+  left: 74.3vw;
   animation-name: stars;
   animation-duration: 2.25s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars14 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 24.6vh;
-  left: 81.3vw;
+  top: 21.6vh;
+  left: 77.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars14_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 80px;
+  height: 80px;
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 24.6vh;
-  left: 81.3vw;
+  top: 21.6vh;
+  left: 77.3vw;
   animation-name: stars;
   animation-duration: 2.15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars15 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
+  width: 130px;
+  height: 130px;
+  background: url(../img/star3.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   position: fixed;
-  top: 17.6vh;
-  left: 86.3vw;
+  top: 23.6vh;
+  left: 81.3vw;
   z-index: 5;
-  transform: rotate(45deg);
 }
 .stars15_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
+  width: 130px;
+  height: 130px;
+  background: url(../img/star3blur.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: fixed;
-  top: 17.6vh;
-  left: 86.3vw;
+  top: 23.6vh;
+  left: 81.3vw;
   animation-name: stars;
   animation-duration: 1.9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-  transform: rotate(45deg);
-}
-.stars16 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 33.6vh;
-  left: 94.3vw;
-  z-index: 5;
-  transform: rotate(45deg);
-}
-.stars16_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star2blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 33.6vh;
-  left: 94.3vw;
-  animation-name: stars;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-  transform: rotate(45deg);
-}
-.stars17 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 2.6vh;
-  left: 75.3vw;
-  z-index: 5;
-}
-.stars17_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 2.6vh;
-  left: 75.3vw;
-  animation-name: stars;
-  animation-duration: 2.05s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-}
-.stars18 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 43.6vh;
-  left: 86.3vw;
-  z-index: 5;
-}
-.stars18_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 43.6vh;
-  left: 86.3vw;
-  animation-name: stars;
-  animation-duration: 2.25s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-}
-.stars19 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 29.6vh;
-  left: 69.3vw;
-  z-index: 5;
-}
-.stars19_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 29.6vh;
-  left: 69.3vw;
-  animation-name: stars;
-  animation-duration: 2.18s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-}
-.stars20 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 24.6vh;
-  left: 65.3vw;
-  z-index: 5;
-}
-.stars20_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 24.6vh;
-  left: 65.3vw;
-  animation-name: stars;
-  animation-duration: 2.13s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-}
-.stars21 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 23.6vh;
-  left: 52.3vw;
-  z-index: 5;
-}
-.stars21_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 23.6vh;
-  left: 52.3vw;
-  animation-name: stars;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 5;
-}
-.stars22 {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-  position: fixed;
-  top: 27.6vh;
-  left: 45.3vw;
-  z-index: 5;
-}
-.stars22_blur {
-  width: 106px;
-  height: 106px;
-  background: url(../img/star1blur.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  top: 27.6vh;
-  left: 45.3vw;
-  animation-name: stars;
-  animation-duration: 2.4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: 5;
@@ -696,9 +484,9 @@ body {
   right: -67vw;
   top: -43vh;
   animation-name: cometFly;
-  animation-duration: 30s;
-  animation-delay: 25s;
-  animation-iteration-count: 1;
+  animation-duration: 240s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: -5;
 }
@@ -713,9 +501,9 @@ body {
   right: 38vw;
   top: -65vh;
   animation-name: ufoFly;
-  animation-duration: 40s;
-  animation-delay: 10s;
-  animation-iteration-count: 1;
+  animation-duration: 240s;
+  animation-delay: 123s;
+  animation-iteration-count: inherit;
   animation-timing-function: linear;
   z-index: -6;
 }
@@ -724,6 +512,7 @@ body {
   z-index: 105;
   opacity: 0;
   position: absolute;
+  bottom: 12vh;
   left: 35vw;
   bottom: 0;
   width: 20vw;
@@ -1183,7 +972,7 @@ body {
     right: -67vwvw;
     top: -43vh;
   }
-  10% {
+  1.2% {
     right: 74vw;
     top: 95vh;
   }
@@ -1197,55 +986,55 @@ body {
     right: 38vw;
     top: -65vh;
   }
-  2% {
+  1.6% {
     right: 44vw;
     top: -9vh;
   }
-  4% {
+  1.9% {
     right: 36vw;
     top: 22vh;
   }
-  6% {
+  2.2% {
     right: 28vw;
     top: 18vh;
   }
-  8% {
+  2.5% {
     right: 5vw;
     top: 25vh;
   }
-  10% {
+  2.8% {
     right: 1vw;
     top: 5vh;
   }
-  12% {
-    right: 30vw;
+  3.1% {
+    right: 15vw;
     top: -6vh;
   }
-  14% {
+  3.4% {
     right: 43vw;
     top: 14vh;
   }
-  16% {
+  3.7% {
     right: 29vw;
     top: 32vh;
   }
-  18% {
+  4% {
     right: 21vw;
     top: 47vh;
   }
-  20% {
+  4.3% {
     right: 7vw;
     top: 35vh;
   }
-  22% {
+  4.6% {
     right: -8vw;
     top: 31vh;
   }
-  24% {
+  4.9% {
     right: -16vw;
     top: 40vh;
   }
-  26% {
+  5.2% {
     right: -53vw;
     top: 53vh;
   }
@@ -1278,6 +1067,96 @@ body {
     width: 75vw;
     height: 63vh;
   }
+  .stars1 {
+    transform: scale(0.3);
+  }
+  .stars1_blur {
+    transform: scale(0.3);
+  }
+  .stars2 {
+    transform: scale(0.3);
+  }
+  .stars2_blur {
+    transform: scale(0.3);
+  }
+  .stars3 {
+    transform: scale(0.3);
+  }
+  .stars3_blur {
+    transform: scale(0.3);
+  }
+  .stars4 {
+    transform: scale(0.3);
+  }
+  .stars4_blur {
+    transform: scale(0.3);
+  }
+  .stars5 {
+    transform: scale(0.3);
+  }
+  .stars5_blur {
+    transform: scale(0.3);
+  }
+  .stars6 {
+    transform: scale(0.3);
+  }
+  .stars6_blur {
+    transform: scale(0.3);
+  }
+  .stars7 {
+    transform: scale(0.5);
+  }
+  .stars7_blur {
+    transform: scale(0.5);
+  }
+  .stars8 {
+    transform: scale(0.4);
+  }
+  .stars8_blur {
+    transform: scale(0.4);
+  }
+  .stars9 {
+    transform: scale(0.4);
+  }
+  .stars9_blur {
+    transform: scale(0.4);
+  }
+  .stars10 {
+    transform: scale(0.4);
+  }
+  .stars10_blur {
+    transform: scale(0.4);
+  }
+  .stars11 {
+    transform: scale(0.4);
+  }
+  .stars11_blur {
+    transform: scale(0.4);
+  }
+  .stars12 {
+    transform: scale(0.4);
+  }
+  .stars12_blur {
+    transform: scale(0.4);
+  }
+  .stars13 {
+    transform: scale(0.4);
+  }
+  .stars13_blur {
+    transform: scale(0.4);
+  }
+  .stars14 {
+    transform: scale(0.4);
+  }
+  .stars14_blur {
+    transform: scale(0.4);
+  }
+  .stars15 {
+    transform: scale(0.55);
+  }
+  .stars15_blur {
+    transform: scale(0.55);
+  }
 }
 @media (max-width: 2048px) {
   .container_keyboard {
@@ -1289,6 +1168,96 @@ body {
   }
   .neznayka__question {
     font-size: calc(14px + 43 * (100vw / 3840));
+  }
+  .stars1 {
+    transform: scale(0.5);
+  }
+  .stars1_blur {
+    transform: scale(0.5);
+  }
+  .stars2 {
+    transform: scale(0.5);
+  }
+  .stars2_blur {
+    transform: scale(0.5);
+  }
+  .stars3 {
+    transform: scale(0.5);
+  }
+  .stars3_blur {
+    transform: scale(0.5);
+  }
+  .stars4 {
+    transform: scale(0.5);
+  }
+  .stars4_blur {
+    transform: scale(0.5);
+  }
+  .stars5 {
+    transform: scale(0.5);
+  }
+  .stars5_blur {
+    transform: scale(0.5);
+  }
+  .stars6 {
+    transform: scale(0.5);
+  }
+  .stars6_blur {
+    transform: scale(0.5);
+  }
+  .stars7 {
+    transform: scale(0.7);
+  }
+  .stars7_blur {
+    transform: scale(0.7);
+  }
+  .stars8 {
+    transform: scale(0.6);
+  }
+  .stars8_blur {
+    transform: scale(0.6);
+  }
+  .stars9 {
+    transform: scale(0.6);
+  }
+  .stars9_blur {
+    transform: scale(0.6);
+  }
+  .stars10 {
+    transform: scale(0.6);
+  }
+  .stars10_blur {
+    transform: scale(0.6);
+  }
+  .stars11 {
+    transform: scale(0.6);
+  }
+  .stars11_blur {
+    transform: scale(0.6);
+  }
+  .stars12 {
+    transform: scale(0.6);
+  }
+  .stars12_blur {
+    transform: scale(0.6);
+  }
+  .stars13 {
+    transform: scale(0.6);
+  }
+  .stars13_blur {
+    transform: scale(0.6);
+  }
+  .stars14 {
+    transform: scale(0.6);
+  }
+  .stars14_blur {
+    transform: scale(0.6);
+  }
+  .stars15 {
+    transform: scale(0.75);
+  }
+  .stars15_blur {
+    transform: scale(0.75);
   }
 }
 
@@ -1329,6 +1298,96 @@ body {
   }
 }
 @media (max-width: 1440px) {
+  .stars1 {
+    transform: scale(0.2);
+  }
+  .stars1_blur {
+    transform: scale(0.2);
+  }
+  .stars2 {
+    transform: scale(0.2);
+  }
+  .stars2_blur {
+    transform: scale(0.2);
+  }
+  .stars3 {
+    transform: scale(0.2);
+  }
+  .stars3_blur {
+    transform: scale(0.2);
+  }
+  .stars4 {
+    transform: scale(0.2);
+  }
+  .stars4_blur {
+    transform: scale(0.2);
+  }
+  .stars5 {
+    transform: scale(0.2);
+  }
+  .stars5_blur {
+    transform: scale(0.2);
+  }
+  .stars6 {
+    transform: scale(0.2);
+  }
+  .stars6_blur {
+    transform: scale(0.2);
+  }
+  .stars7 {
+    transform: scale(0.4);
+  }
+  .stars7_blur {
+    transform: scale(0.4);
+  }
+  .stars8 {
+    transform: scale(0.3);
+  }
+  .stars8_blur {
+    transform: scale(0.3);
+  }
+  .stars9 {
+    transform: scale(0.3);
+  }
+  .stars9_blur {
+    transform: scale(0.3);
+  }
+  .stars10 {
+    transform: scale(0.3);
+  }
+  .stars10_blur {
+    transform: scale(0.3);
+  }
+  .stars11 {
+    transform: scale(0.3);
+  }
+  .stars11_blur {
+    transform: scale(0.3);
+  }
+  .stars12 {
+    transform: scale(0.3);
+  }
+  .stars12_blur {
+    transform: scale(0.3);
+  }
+  .stars13 {
+    transform: scale(0.3);
+  }
+  .stars13_blur {
+    transform: scale(0.3);
+  }
+  .stars14 {
+    transform: scale(0.3);
+  }
+  .stars14_blur {
+    transform: scale(0.3);
+  }
+  .stars15 {
+    transform: scale(0.45);
+  }
+  .stars15_blur {
+    transform: scale(0.45);
+  }
   .neznayka__image {
     left: -5vw;
     width: 47vw;
