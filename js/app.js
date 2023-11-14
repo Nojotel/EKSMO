@@ -80,7 +80,7 @@ function visibilityAnswerText() {
   } else if (text.length <= 110) {
     answerText.style.fontSize = "1.35vw";
   } else if (text.length <= 220) {
-    answerText.style.fontSize = "1.07vw";
+    answerText.style.fontSize = "0.9vw";
   } else if (text.length > 221) {
     answerText.style.fontSize = "0.8vw";
   }
@@ -242,7 +242,7 @@ class VoiceRecorder {
       } else if (text.length <= 110) {
         answerQuestion.style.fontSize = "1.35vw";
       } else if (text.length <= 220) {
-        answerQuestion.style.fontSize = "1.07vw";
+        answerQuestion.style.fontSize = "0.9vw";
       } else if (text.length > 221) {
         answerQuestion.style.fontSize = "0.8vw";
       }
@@ -287,7 +287,7 @@ async function senVoice(blob) {
     } else if (text.length <= 110) {
       answerQuestion.style.fontSize = "1.35vw";
     } else if (text.length <= 220) {
-      answerQuestion.style.fontSize = "1.07vw";
+      answerQuestion.style.fontSize = "0.9vw";
     } else if (text.length > 221) {
       answerQuestion.style.fontSize = "0.8vw";
     }
@@ -317,7 +317,7 @@ async function senVoice(blob) {
     } else if (text.length <= 110) {
       answerText.style.fontSize = "1.35vw";
     } else if (text.length <= 220) {
-      answerText.style.fontSize = "1.07vw";
+      answerText.style.fontSize = "0.9vw";
     } else if (text.length > 221) {
       answerText.style.fontSize = "0.8vw";
     }
@@ -363,7 +363,7 @@ document.addEventListener("keydown", function (event) {
     } else if (question.textContent.length <= 110) {
       answerQuestion.style.fontSize = "1.35vw";
     } else if (question.textContent.length <= 220) {
-      answerQuestion.style.fontSize = "1.07vw";
+      answerQuestion.style.fontSize = "0.9vw";
     } else if (question.textContent.length > 221) {
       answerQuestion.style.fontSize = "0.8vw";
     }
@@ -532,7 +532,7 @@ sendVoice.addEventListener("click", function () {
     } else if (text.length <= 110) {
       answerQuestion.style.fontSize = "1.35vw";
     } else if (text.length <= 220) {
-      answerQuestion.style.fontSize = "1.07vw";
+      answerQuestion.style.fontSize = "0.9vw";
     } else if (text.length > 221) {
       answerQuestion.style.fontSize = "0.8vw";
     }
@@ -595,7 +595,7 @@ home.addEventListener("click", function () {
   } else if (question.textContent.length <= 110) {
     answerQuestion.style.fontSize = "1.35vw";
   } else if (question.textContent.length <= 220) {
-    answerQuestion.style.fontSize = "1.07vw";
+    answerQuestion.style.fontSize = "0.9vw";
   } else if (question.textContent.length > 221) {
     answerQuestion.style.fontSize = "0.8vw";
   }
@@ -639,7 +639,7 @@ inputSendBut.addEventListener("click", async function () {
   } else if (question.textContent.length <= 110) {
     answerQuestion.style.fontSize = "1.35vw";
   } else if (question.textContent.length <= 220) {
-    answerQuestion.style.fontSize = "1.07vw";
+    answerQuestion.style.fontSize = "0.9vw";
   } else if (question.textContent.length > 221) {
     answerQuestion.style.fontSize = "0.8vw";
   }
