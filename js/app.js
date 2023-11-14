@@ -3,6 +3,7 @@ const keyboard = document.querySelector(".navigation__keyboard");
 const star = document.querySelector(".star");
 const neznayka = document.querySelector(".neznayka__image");
 const shrek = document.querySelector(".shrek");
+const shrek2 = document.querySelector(".shrek2");
 const answerText = document.querySelector(".neznayka__answer");
 const answerQuestion = document.querySelector(".neznayka__question");
 const answerBlob = document.querySelector(".answer_blob");
@@ -16,6 +17,8 @@ const input = document.querySelector(".container_keyboard");
 const inputClose = document.querySelector(".inputClose");
 const cursor = document.querySelector(".inputText");
 const inputSendBut = document.querySelector(".inputSend");
+const comet = document.querySelector(".comet");
+const ufo = document.querySelector(".ufo");
 
 /*function start() {
   helloGIF.src = "./img/Book.gif";
@@ -26,6 +29,29 @@ function visibilityHello() {
   main.classList.remove("hidden");
 }
 setTimeout(visibilityHello, timeHello);*/
+let clockInterval;
+function clock() {
+  console.log("вызрыв");
+  questionBlob.classList.add("hidden");
+  shrek.classList.remove("hidden");
+  shrek2.classList.remove("hidden");
+  input.classList.add("hidden");
+  keyboard.classList.remove("click");
+  ufo.classList.remove("hidden");
+  comet.classList.remove("hidden");
+}
+const startClock = () => {
+  questionBlob.classList.remove("hidden");
+  shrek.classList.add("hidden");
+  shrek2.classList.add("hidden");
+  comet.classList.add("hidden");
+  ufo.classList.add("hidden");
+  clockInterval = setInterval(clock, 5000);
+};
+const stopClock = () => {
+  clearInterval(clockInterval);
+};
+startClock();
 
 function visibilityStar() {
   star.classList.add("opacity");
@@ -47,6 +73,18 @@ function visibilityAnswerText() {
   let text = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
   let delay = 40;
   let elem = document.querySelector(".neznayka__answer");
+  if (text.length <= 10) {
+    answerText.style.fontSize = "4vw";
+  } else if (text.length <= 60) {
+    answerText.style.fontSize = "2vw";
+  } else if (text.length <= 110) {
+    answerText.style.fontSize = "1.35vw";
+  } else if (text.length <= 220) {
+    answerText.style.fontSize = "1.07vw";
+  } else if (text.length > 221) {
+    answerText.style.fontSize = "0.8vw";
+  }
+  // answerText.style.fontSize = "55px";
 
   let print_text = function (text, elem, delay) {
     if (text.length > 0) {
@@ -58,10 +96,16 @@ function visibilityAnswerText() {
     }
   };
 
+  //console.log(text.length);
+  //console.log(answerText.style.fontSize='14px');
   print_text(text, elem, delay);
 }
 setTimeout(visibilityAnswerText, 8050 + timeHello);
 
+function visibilityquestionBlob() {
+  //questionBlob.style.opacity = "100";
+  //tyt
+}
 function visibilityNeznayka() {
   neznayka.src = "./img/Привет, меня зовут Незн. Давай поболтаем.gif";
   neznayka.classList.add("opacity");
@@ -82,16 +126,37 @@ function stateNeznayka() {
   neznayka.src = "./img/Незнайка в ожидании.gif";
 }
 setTimeout(stateNeznayka, 12050 + timeHello);
-function visibilityShrek() {
-  shrek.src = "./img/new_alien_smile_ex_2.gif";
-  shrek.classList.add("opacity");
-}
-setTimeout(visibilityShrek, 18000 + timeHello);
+function smileShrek() {
+  visibilityShrek();
+  setTimeout(noVisibilityShrek, 6400);
+  function visibilityShrek() {
+    shrek.src = "./img/new_alien_smile_ex_2.gif";
+    shrek.classList.add("opacity");
+  }
+  setInterval(visibilityShrek, 240000 + timeHello);
 
-function noVisibilityShrek() {
-  shrek.classList.remove("opacity");
+  function noVisibilityShrek() {
+    shrek.classList.remove("opacity");
+  }
+  setInterval(noVisibilityShrek, 246400 + timeHello);
 }
-setTimeout(noVisibilityShrek, 24400 + timeHello);
+setTimeout(smileShrek, 60000);
+
+function scaryShrek() {
+  visibilityShrek2();
+  setTimeout(noVisibilityShrek2, 3700);
+  function visibilityShrek2() {
+    shrek2.src = "./img/alien_scary.gif";
+    shrek2.classList.add("opacity");
+  }
+  setInterval(visibilityShrek2, 240000 + timeHello);
+
+  function noVisibilityShrek2() {
+    shrek2.classList.remove("opacity");
+  }
+  setInterval(noVisibilityShrek2, 243700 + timeHello);
+}
+setTimeout(scaryShrek, 180000);
 
 class VoiceRecorder {
   constructor() {
@@ -170,6 +235,17 @@ class VoiceRecorder {
       let text = `Подожди, я думаю...`;
       let delay = 40;
       let elem = question;
+      if (text.length <= 10) {
+        answerQuestion.style.fontSize = "4vw";
+      } else if (text.length <= 60) {
+        answerQuestion.style.fontSize = "2vw";
+      } else if (text.length <= 110) {
+        answerQuestion.style.fontSize = "1.35vw";
+      } else if (text.length <= 220) {
+        answerQuestion.style.fontSize = "1.07vw";
+      } else if (text.length > 221) {
+        answerQuestion.style.fontSize = "0.8vw";
+      }
 
       let print_text = function (text, elem, delay) {
         if (text.length > 0) {
@@ -204,7 +280,17 @@ async function senVoice(blob) {
     let text = `${response.recognized_text}`;
     let delay = 40;
     let elem = question;
-
+    if (text.length <= 10) {
+      answerQuestion.style.fontSize = "4vw";
+    } else if (text.length <= 60) {
+      answerQuestion.style.fontSize = "2vw";
+    } else if (text.length <= 110) {
+      answerQuestion.style.fontSize = "1.35vw";
+    } else if (text.length <= 220) {
+      answerQuestion.style.fontSize = "1.07vw";
+    } else if (text.length > 221) {
+      answerQuestion.style.fontSize = "0.8vw";
+    }
     let print_text = function (text, elem, delay) {
       if (text.length > 0) {
         elem.innerHTML += text[0];
@@ -224,7 +310,17 @@ async function senVoice(blob) {
     let text = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
     let delay = 40;
     let elem = answer;
-
+    if (text.length <= 10) {
+      answerText.style.fontSize = "4vw";
+    } else if (text.length <= 60) {
+      answerText.style.fontSize = "2vw";
+    } else if (text.length <= 110) {
+      answerText.style.fontSize = "1.35vw";
+    } else if (text.length <= 220) {
+      answerText.style.fontSize = "1.07vw";
+    } else if (text.length > 221) {
+      answerText.style.fontSize = "0.8vw";
+    }
     let print_text = function (text, elem, delay) {
       if (text.length > 0) {
         elem.innerHTML += text[0];
@@ -243,11 +339,55 @@ async function senVoice(blob) {
     neznayka.src = "./img/Незнайка в ожидании.gif";
   }
   setTimeout(stateNeznayka, 7100);
-  questionBlob.style.transform = "scale(0.8)";
+  questionBlob.style.transform = "translate(50px, 50px) scale(0.8)";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
   answerBlob.style.transform = "scale(1.2)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
+  stopClock();
+  startClock();
 }
+
+document.addEventListener("keydown", function (event) {
+  if (event.altKey && event.key === "й") {
+    home.classList.add("clear");
+    answerText.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
+    questionBlob.style.transform = "scale(1)";
+    answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
+    answerBlob.style.transform = "scale(1)";
+    questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
+    question.textContent = "Готов тебя слушать, нажми на микрофон";
+    if (question.textContent.length <= 10) {
+      answerQuestion.style.fontSize = "4vw";
+    } else if (question.textContent.length <= 60) {
+      answerQuestion.style.fontSize = "2vw";
+    } else if (question.textContent.length <= 110) {
+      answerQuestion.style.fontSize = "1.35vw";
+    } else if (question.textContent.length <= 220) {
+      answerQuestion.style.fontSize = "1.07vw";
+    } else if (question.textContent.length > 221) {
+      answerQuestion.style.fontSize = "0.8vw";
+    }
+    function off() {
+      home.classList.remove("clear");
+    }
+    setTimeout(off, 1000);
+  }
+  stopClock();
+  startClock();
+});
+document.addEventListener("keydown", function (event) {
+  if (event.altKey && event.key === "ц") {
+    if (startMicro.classList.contains("hidden")) {
+      return;
+    } else {
+      input.classList.toggle("hidden");
+      keyboard.classList.toggle("click");
+      cursor.select();
+    }
+  }
+  stopClock();
+  startClock();
+});
 
 const keyboardPress = [1081, 1094, 1091, 1082, 1077, 1085, 1075, 1096, 1097, 1079, 1093, 1098, 8, 1092, 1099, 1074, 1072, 1087, 1088, 1086, 1083, 1076, 1078, 1101, 63, 13, 0, 1103, 1095, 1089, 1084, 1080, 1090, 1100, 1073, 1102, 44, 46, 0, 32];
 function init() {
@@ -298,7 +438,7 @@ document.onkeypress = function (event) {
       console.log(response);
     }
     sendText();
-    questionBlob.style.opacity = "100";
+    questionBlob.style.opacity = "100"; //tyt
     questionBlob.style.transform = "scale(0.8)";
     answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
     answerBlob.style.transform = "scale(1.2)";
@@ -306,6 +446,8 @@ document.onkeypress = function (event) {
     cursor.value = "";
     answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
   }
+  stopClock();
+  startClock();
 };
 
 document.querySelectorAll("#keyboard .key").forEach((element) => {
@@ -358,6 +500,8 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
       answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
     }
   };
+  stopClock();
+  startClock();
 });
 
 const sendVoice = document.querySelector(".microphone_start");
@@ -381,7 +525,17 @@ sendVoice.addEventListener("click", function () {
     let text = `Идет запись...`;
     let delay = 40;
     let elem = question;
-
+    if (text.length <= 10) {
+      answerQuestion.style.fontSize = "4vw";
+    } else if (text.length <= 60) {
+      answerQuestion.style.fontSize = "2vw";
+    } else if (text.length <= 110) {
+      answerQuestion.style.fontSize = "1.35vw";
+    } else if (text.length <= 220) {
+      answerQuestion.style.fontSize = "1.07vw";
+    } else if (text.length > 221) {
+      answerQuestion.style.fontSize = "0.8vw";
+    }
     let print_text = function (text, elem, delay) {
       if (text.length > 0) {
         elem.innerHTML += text[0];
@@ -398,12 +552,16 @@ sendVoice.addEventListener("click", function () {
   answer.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
   questionBlob.style.transform = "scale(1.2)";
-  answerBlob.style.transform = "scale(0.8)";
+  answerBlob.style.transform = "translate(-50px, 50px) scale(0.8)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user-green.png')";
+  stopClock();
+  startClock();
 });
 stopVoice.addEventListener("click", function () {
   stopVoice.classList.add("hidden");
   sendVoice.classList.remove("hidden");
+  stopClock();
+  startClock();
 });
 
 home.addEventListener("click", function () {
@@ -418,6 +576,8 @@ keyboard.addEventListener("click", function () {
     keyboard.classList.toggle("click");
     cursor.select();
   }
+  stopClock();
+  startClock();
 });
 
 home.addEventListener("click", function () {
@@ -428,16 +588,41 @@ home.addEventListener("click", function () {
   answerBlob.style.transform = "scale(1)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
   question.textContent = "Готов тебя слушать, нажми на микрофон";
+  if (question.textContent.length <= 10) {
+    answerQuestion.style.fontSize = "4vw";
+  } else if (question.textContent.length <= 60) {
+    answerQuestion.style.fontSize = "2vw";
+  } else if (question.textContent.length <= 110) {
+    answerQuestion.style.fontSize = "1.35vw";
+  } else if (question.textContent.length <= 220) {
+    answerQuestion.style.fontSize = "1.07vw";
+  } else if (question.textContent.length > 221) {
+    answerQuestion.style.fontSize = "0.8vw";
+  }
   function off() {
     home.classList.remove("clear");
   }
   setTimeout(off, 1000);
+  stopClock();
+  startClock();
 });
 
-inputClose.addEventListener("click", function () {
-  input.classList.toggle("hidden");
-  keyboard.classList.toggle("click");
-});
+const closed = (event) => {
+  inputClose.addEventListener("click", function () {
+    input.classList.toggle("hidden");
+    keyboard.classList.toggle("click");
+  });
+
+  const key = event.key;
+
+  if (key === "Escape") {
+    input.classList.add("hidden");
+    keyboard.classList.remove("click");
+  }
+  stopClock();
+  startClock();
+};
+document.addEventListener("keyup", closed);
 
 inputSendBut.addEventListener("click", async function () {
   input.classList.add("hidden");
@@ -447,6 +632,17 @@ inputSendBut.addEventListener("click", async function () {
   answerBlob.style.transform = "scale(0.8)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user-green.png')";
   question.textContent = cursor.value;
+  if (question.textContent.length <= 10) {
+    answerQuestion.style.fontSize = "4vw";
+  } else if (question.textContent.length <= 60) {
+    answerQuestion.style.fontSize = "2vw";
+  } else if (question.textContent.length <= 110) {
+    answerQuestion.style.fontSize = "1.35vw";
+  } else if (question.textContent.length <= 220) {
+    answerQuestion.style.fontSize = "1.07vw";
+  } else if (question.textContent.length > 221) {
+    answerQuestion.style.fontSize = "0.8vw";
+  }
   async function sendText(blob) {
     blob = cursor.value;
     let formData = new FormData();
@@ -467,6 +663,8 @@ inputSendBut.addEventListener("click", async function () {
   questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
   cursor.value = "";
   answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
+  stopClock();
+  startClock();
 });
 
 window.voiceRecorder = new VoiceRecorder();
