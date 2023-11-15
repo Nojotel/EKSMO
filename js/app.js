@@ -46,7 +46,7 @@ const startClock = () => {
   shrek2.classList.add("hidden");
   comet.classList.add("hidden");
   ufo.classList.add("hidden");
-  clockInterval = setInterval(clock, 30000);
+  clockInterval = setInterval(clock, 5000);
 };
 const stopClock = () => {
   clearInterval(clockInterval);
