@@ -12,7 +12,9 @@ button {
 body {
   background-color: var(--color-background);
 }
-
+.nonDisplay {
+  display: none;
+}
 .hello_container {
   background-repeat: no-repeat;
   width: 100vw;
@@ -47,6 +49,66 @@ body {
   height: 100vh;
 }
 .star {
+  opacity: 0;
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  z-index: -6;
+}
+.star1 {
+  opacity: 0;
+  position: fixed;
+  transform: rotate(25deg);
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  z-index: -6;
+}
+.star2 {
+  opacity: 0;
+  position: fixed;
+  transform: translate(-101vh, -1vh);
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  z-index: -6;
+}
+.star3 {
+  transform: rotate(24deg) translate(-18vw, -3vh);
+  position: fixed;
+  opacity: 0;
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  z-index: -6;
+}
+.star4 {
+  transform: rotate(-10deg) translate(4vw, 69vh);
+  position: fixed;
+  opacity: 0;
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  z-index: -6;
+}
+.star5 {
+  transform: rotate(-29deg) translate(-73vw, 39vh);
+  position: fixed;
+  opacity: 0;
+  animation-name: visibility;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  z-index: -6;
+}
+.star6 {
+  transform: rotate(130deg) translate(-93vw, -88vh);
+  position: fixed;
   opacity: 0;
   animation-name: visibility;
   animation-duration: 1s;
@@ -726,8 +788,8 @@ body {
   width: 30vw;
   height: 33vh;
   position: fixed;
-  right: 36vw;
-  bottom: 40vh;
+  right: 34vw;
+  bottom: 37vh;
 
   animation-name: sizeText;
   animation-duration: 1s;
@@ -959,13 +1021,13 @@ body {
   }
   80% {
     transform: scale(1.1);
-    right: 36vw;
-    bottom: 40vh;
+    right: 34vw;
+    bottom: 37vh;
   }
   100% {
     transform: scale(1);
-    right: 36vw;
-    bottom: 40vh;
+    right: 34vw;
+    bottom: 37vh;
   }
 }
 @keyframes sizeTextQuestion {
@@ -1313,7 +1375,7 @@ body {
 
 @media (max-height: 1080px) {
   .microphone_start {
-    height: 33vh;
+    height: 29vh;
   }
   .container_keyboard {
     height: 65vh;
@@ -1446,10 +1508,11 @@ body {
   }
   .answer_blob {
     right: 37vw;
-    bottom: 40vh;
+    bottom: 27vh;
   }
   .qustion_blob {
-    bottom: 14vh;
+    bottom: 21vh;
+    right: 8vw;
   }
   .neznayka__question {
     height: 11vh;
@@ -1459,6 +1522,7 @@ body {
     top: 23vh;
     left: 29vw;
     height: 10vh;
+    margin-left: 9vh;
     font-size: calc(9px + 43 * (100vw / 3840));
   }
   .microphone_start {
@@ -1479,28 +1543,74 @@ body {
     80% {
       transform: scale(1.1);
       right: 37vw;
-      bottom: 40vh;
+      bottom: 27vh;
     }
     100% {
       transform: scale(1);
       right: 37vw;
-      bottom: 40vh;
+      bottom: 27vh;
     }
   }
 }
 @media (max-height: 980px) {
   .microphone_start {
-    height: 32vh;
+    height: 31vh;
   }
 }
 @media (max-height: 900px) {
   .microphone_start {
     height: 34vh;
   }
+  .container_keyboard {
+    height: 72vh;
+  }
+  .neznayka__answer {
+    margin-top: 6vh;
+  }
 }
 @media (max-height: 820px) {
   .microphone_start {
-    height: 38vh;
+    height: 34vh;
+  }
+}
+@media (max-width: 1400px) {
+  .nonDisplay {
+    display: block;
+    position: fixed;
+    top: 0px;
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-background);
+  }
+  .nonDisplay_block {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 10vw;
+  }
+}
+@media (max-height: 780px) {
+  .nonDisplay {
+    display: block;
+    position: fixed;
+    top: 0px;
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-background);
+  }
+  .nonDisplay_block {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 10vh;
   }
 }
 /*:root {

@@ -1,6 +1,12 @@
 const home = document.querySelector(".navigation__home");
 const keyboard = document.querySelector(".navigation__keyboard");
 const star = document.querySelector(".star");
+const star1 = document.querySelector(".star1");
+const star2 = document.querySelector(".star2");
+const star3 = document.querySelector(".star3");
+const star4 = document.querySelector(".star4");
+const star5 = document.querySelector(".star5");
+const star6 = document.querySelector(".star6");
 const neznayka = document.querySelector(".neznayka__image");
 const shrek = document.querySelector(".shrek");
 const shrek2 = document.querySelector(".shrek2");
@@ -55,6 +61,12 @@ startClock();
 
 function visibilityStar() {
   star.classList.add("opacity");
+  star1.classList.add("opacity");
+  star2.classList.add("opacity");
+  star3.classList.add("opacity");
+  star4.classList.add("opacity");
+  star5.classList.add("opacity");
+  star6.classList.add("opacity");
 }
 setTimeout(visibilityStar, 2000 + timeHello);
 
@@ -339,9 +351,9 @@ async function senVoice(blob) {
     neznayka.src = "./img/Незнайка в ожидании.gif";
   }
   setTimeout(stateNeznayka, 7100);
-  questionBlob.style.transform = "translate(50px, 50px) scale(0.8)";
+  questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
-  answerBlob.style.transform = "scale(1.2)";
+  answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
   stopClock();
   startClock();
@@ -422,7 +434,7 @@ document.onkeypress = function (event) {
     keyboard.classList.remove("click");
     answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
     questionBlob.style.transform = "scale(1.2)";
-    answerBlob.style.transform = "scale(0.8)";
+    answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
     questionBlob.style.backgroundImage = "url('./img/dialog-user-green.png')";
     question.textContent = cursor.value;
     async function sendText(blob) {
@@ -439,9 +451,9 @@ document.onkeypress = function (event) {
     }
     sendText();
     questionBlob.style.opacity = "100"; //tyt
-    questionBlob.style.transform = "scale(0.8)";
+    questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
     answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
-    answerBlob.style.transform = "scale(1.2)";
+    answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
     questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
     cursor.value = "";
     answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
@@ -475,7 +487,7 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
       keyboard.classList.remove("click");
       answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
       questionBlob.style.transform = "scale(1.2)";
-      answerBlob.style.transform = "scale(0.8)";
+      answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
       questionBlob.style.backgroundImage = "url('./img/dialog-user-green.png')";
       question.textContent = cursor.value;
       async function sendText(blob) {
@@ -492,9 +504,9 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
       }
       sendText();
       questionBlob.style.opacity = "100";
-      questionBlob.style.transform = "scale(0.8)";
+      questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
       answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
-      answerBlob.style.transform = "scale(1.2)";
+      answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
       questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
       cursor.value = "";
       answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
@@ -552,7 +564,7 @@ sendVoice.addEventListener("click", function () {
   answer.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
   questionBlob.style.transform = "scale(1.2)";
-  answerBlob.style.transform = "translate(-50px, 50px) scale(0.8)";
+  answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user-green.png')";
   stopClock();
   startClock();
@@ -629,7 +641,7 @@ inputSendBut.addEventListener("click", async function () {
   keyboard.classList.remove("click");
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
   questionBlob.style.transform = "scale(1.2)";
-  answerBlob.style.transform = "scale(0.8)";
+  answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user-green.png')";
   question.textContent = cursor.value;
   if (question.textContent.length <= 10) {
@@ -662,9 +674,9 @@ inputSendBut.addEventListener("click", async function () {
   setTimeout(stateNeznayka, 7100);
   sendText();
   questionBlob.style.opacity = "100";
-  questionBlob.style.transform = "scale(0.8)";
+  questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
-  answerBlob.style.transform = "scale(1.2)";
+  answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
   questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
   cursor.value = "";
   answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
