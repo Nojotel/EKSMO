@@ -655,6 +655,11 @@ inputSendBut.addEventListener("click", async function () {
     let response = await promise.json();
     console.log(response);
   }
+  neznayka.src = "./img/wait-for-question-and-answer.gif";
+  function stateNeznayka() {
+    neznayka.src = "./img/Незнайка в ожидании.gif";
+  }
+  setTimeout(stateNeznayka, 7100);
   sendText();
   questionBlob.style.opacity = "100";
   questionBlob.style.transform = "scale(0.8)";
