@@ -619,14 +619,13 @@ home.addEventListener("click", function () {
   startClock();
 });
 
+inputClose.addEventListener("click", function (event) {
+  input.classList.toggle("hidden");
+  keyboard.classList.toggle("click");
+});
+
 const closed = (event) => {
-  inputClose.addEventListener("click", function () {
-    input.classList.toggle("hidden");
-    keyboard.classList.toggle("click");
-  });
-
   const key = event.key;
-
   if (key === "Escape") {
     input.classList.add("hidden");
     keyboard.classList.remove("click");

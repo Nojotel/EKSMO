@@ -667,7 +667,7 @@ body {
   opacity: 0;
   position: relative;
   bottom: 7vh;
-  left: -2vw;
+  left: -5vw;
   width: 47vw;
   height: 82vh;
   animation-name: visibility;
@@ -788,7 +788,7 @@ body {
   width: 30vw;
   height: 33vh;
   position: fixed;
-  right: 34vw;
+  right: 38vw;
   bottom: 37vh;
 
   animation-name: sizeText;
@@ -806,8 +806,8 @@ body {
   width: 30vw;
   height: 30vh;
   position: fixed;
-  right: 2vw;
-  bottom: 33vh;
+  right: 4vw;
+  bottom: 29vh;
   transition: transform 0.5s;
   transform: scale(0);
 
@@ -1021,12 +1021,12 @@ body {
   }
   80% {
     transform: scale(1.1);
-    right: 34vw;
+    right: 38vw;
     bottom: 37vh;
   }
   100% {
     transform: scale(1);
-    right: 34vw;
+    right: 38vw;
     bottom: 37vh;
   }
 }
@@ -1157,7 +1157,7 @@ body {
 }
 @media (max-width: 1920px) {
   .neznayka__image {
-    left: -1vw;
+    left: -3vw;
     width: 43vw;
     height: 80vh;
   }
@@ -1504,7 +1504,7 @@ body {
     left: -5vw;
     width: 47vw;
     height: 64vh;
-    top: 6vh;
+    top: 12vh;
   }
   .answer_blob {
     right: 37vw;
