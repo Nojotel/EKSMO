@@ -753,5 +753,11 @@ home.addEventListener("click", function () {
     setTimeout(ClassicBlob, 8000);
   }
 });
+keyboard.addEventListener("click", function () {
+  if (home.classList.contains("run")) {
+    input.classList.add("hidden");
+    keyboard.classList.remove("click");
+  }
+});
 
 window.voiceRecorder = new VoiceRecorder();
