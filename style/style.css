@@ -16,9 +16,9 @@ body {
   display: none;
 }
 .wait-moon {
-  animation: rotateMoon 7s linear infinite;
+  animation: rotateMoon 4s linear infinite;
   position: fixed;
-  top: 100vh;
+  bottom: -100vw;
   width: 90vw;
   height: 90vw;
 }
@@ -27,7 +27,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 .wait-nez {

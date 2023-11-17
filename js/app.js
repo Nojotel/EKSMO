@@ -47,22 +47,25 @@ function clock() {
   comet.classList.remove("hidden");
   console.log("xxxx");
   //answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
-  function visibilityNeznayka() {
-    neznayka.src = "./img/Привет, меня зовут Незн. Давай поболтаем.gif";
-  }
-  setInterval(visibilityNeznayka, 3050 + 30000);
+  function waiting() {
+    function visibilityNeznayka() {
+      neznayka.src = "./img/Привет, меня зовут Незн. Давай поболтаем.gif";
+    }
+    setTimeout(visibilityNeznayka, 3050);
 
-  function visibilityAnswerTextWait() {
-    answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
-    answerBlob.style.transform = "scale(1)";
-    answerText.textContent = "";
-    visibilityAnswerText();
+    function visibilityAnswerTextWait() {
+      answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
+      answerBlob.style.transform = "scale(1)";
+      answerText.textContent = "";
+      visibilityAnswerText();
+    }
+    setTimeout(visibilityAnswerTextWait, 8050);
+    function stateNeznayka() {
+      neznayka.src = "./img/Незнайка в ожидании.gif";
+    }
+    setTimeout(stateNeznayka, 12050);
   }
-  setTimeout(visibilityAnswerTextWait, 8050 + 30000);
-  function stateNeznayka() {
-    neznayka.src = "./img/Незнайка в ожидании.gif";
-  }
-  setInterval(stateNeznayka, 12050 + 30000);
+  setTimeout(waiting, 10000);
 }
 const startClock = () => {
   questionBlob.classList.remove("hidden");
@@ -734,17 +737,24 @@ document.addEventListener("keyup", function (event) {
       function NoVisibilityNeznayka() {
         neznayka.classList.add("opacityWait");
         main.style.backgroundPositionY = "94vh";
-        waitMoon.style.transition = "top 7s";
-        waitMoon.style.top = "57vh";
+        waitMoon.style.transition = "bottom 5s";
+        waitMoon.style.bottom = "-67vw";
       }
       setTimeout(NoVisibilityNeznayka, 2000);
+      function FallNez() {
+        waitNez.src = "./img/Незнайка-падает.gif";
+        waitNez.style.transition = "bottom 1.8s";
+        waitNez.style.bottom = "6vw";
+        home.classList.add("run");
+      }
+      setTimeout(FallNez, 4000);
       function RunNez() {
         waitNez.src = "./img/Незнайка-бежит.gif";
         waitNez.style.transition = "bottom 4s";
-        waitNez.style.bottom = "20vh";
+        waitNez.style.bottom = "6vw";
         home.classList.add("run");
       }
-      setTimeout(RunNez, 6000);
+      setTimeout(RunNez, 5700);
     }
   }
 });
