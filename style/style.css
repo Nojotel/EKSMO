@@ -15,6 +15,38 @@ body {
 .nonDisplay {
   display: none;
 }
+.wait-moon {
+  animation: rotateMoon 7s linear infinite;
+  position: fixed;
+  top: 100vh;
+  width: 90vw;
+  height: 90vw;
+}
+@keyframes rotateMoon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wait-nez {
+  left: 28vw;
+  width: 45vw;
+  height: 45vw;
+  position: fixed;
+  bottom: 110vh;
+}
+.logo {
+  width: 386px;
+  height: 107px;
+  background-image: url(../img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
 .hello_container {
   background-repeat: no-repeat;
   width: 100vw;
@@ -32,6 +64,7 @@ body {
   margin-top: 100px;
 }
 .container {
+  transition: background-position 2s ease-in-out;
   background-image: url(../img/moon.png);
   background-repeat: no-repeat;
   width: 100vw;
@@ -955,7 +988,11 @@ body {
 }
 .opacity {
   opacity: 100;
-  transition: transform 0.5s;
+  transition: opacity 0.5s ease-out;
+}
+.opacityWait {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 .pulse {
   animation-name: sizeMicro;
@@ -1410,6 +1447,10 @@ body {
   }
 }
 @media (max-width: 1440px) {
+  .logo {
+    width: 323px;
+    height: 66px;
+  }
   .stars1 {
     transform: scale(0.2);
   }
@@ -1507,12 +1548,12 @@ body {
     top: 12vh;
   }
   .answer_blob {
-    right: 37vw;
-    bottom: 27vh;
+    right: 38.5vw;
+    bottom: 21vh;
   }
   .qustion_blob {
-    bottom: 21vh;
-    right: 8vw;
+    bottom: 20vh;
+    right: 7vw;
   }
   .neznayka__question {
     height: 11vh;
@@ -1542,13 +1583,13 @@ body {
     }
     80% {
       transform: scale(1.1);
-      right: 37vw;
-      bottom: 27vh;
+      right: 38.5vw;
+      bottom: 21vh;
     }
     100% {
       transform: scale(1);
-      right: 37vw;
-      bottom: 27vh;
+      right: 38.5vw;
+      bottom: 21vh;
     }
   }
 }

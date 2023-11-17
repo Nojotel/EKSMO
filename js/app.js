@@ -15,9 +15,9 @@ const answerQuestion = document.querySelector(".neznayka__question");
 const answerBlob = document.querySelector(".answer_blob");
 const questionBlob = document.querySelector(".qustion_blob");
 const startMicro = document.querySelector(".microphone_start");
-const hello = document.querySelector(".hello_container");
+//const hello = document.querySelector(".hello_container");
 const main = document.querySelector(".container");
-const helloGIF = document.querySelector(".hello__gif");
+//const helloGIF = document.querySelector(".hello__gif");
 const timeHello = 0;
 const input = document.querySelector(".container_keyboard");
 const inputClose = document.querySelector(".inputClose");
@@ -25,7 +25,8 @@ const cursor = document.querySelector(".inputText");
 const inputSendBut = document.querySelector(".inputSend");
 const comet = document.querySelector(".comet");
 const ufo = document.querySelector(".ufo");
-
+const waitMoon = document.querySelector(".wait-moon");
+const waitNez = document.querySelector(".wait-nez");
 /*function start() {
   helloGIF.src = "./img/Book.gif";
 }
@@ -37,7 +38,6 @@ function visibilityHello() {
 setTimeout(visibilityHello, timeHello);*/
 let clockInterval;
 function clock() {
-  console.log("вызрыв");
   questionBlob.classList.add("hidden");
   shrek.classList.remove("hidden");
   shrek2.classList.remove("hidden");
@@ -359,15 +359,14 @@ async function senVoice(blob) {
   startClock();
 }
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keyup", function (event) {
   if (event.altKey && event.key === "й") {
     home.classList.add("clear");
     answerText.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
-    questionBlob.style.transform = "scale(1)";
     answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
     answerBlob.style.transform = "scale(1)";
-    questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
-    question.textContent = "Готов тебя слушать, нажми на микрофон";
+    questionBlob.classList.add("hidden");
+    questionBlob.style.transform = "scale(0)";
     if (question.textContent.length <= 10) {
       answerQuestion.style.fontSize = "4vw";
     } else if (question.textContent.length <= 60) {
@@ -387,7 +386,7 @@ document.addEventListener("keydown", function (event) {
   stopClock();
   startClock();
 });
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keyup", function (event) {
   if (event.altKey && event.key === "ц") {
     if (startMicro.classList.contains("hidden")) {
       return;
@@ -395,6 +394,13 @@ document.addEventListener("keydown", function (event) {
       input.classList.toggle("hidden");
       keyboard.classList.toggle("click");
       cursor.select();
+    }
+    if (keyboard.classList.contains("click")) {
+      neznayka.src = "./img/Незнайка-задумался.gif";
+      function stateNeznayka() {
+        neznayka.src = "./img/Незнайка в ожидании.gif";
+      }
+      setTimeout(stateNeznayka, 4900);
     }
   }
   stopClock();
@@ -450,7 +456,7 @@ document.onkeypress = function (event) {
       console.log(response);
     }
     sendText();
-    questionBlob.style.opacity = "100"; //tyt
+    //questionBlob.style.opacity = "100";
     questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
     answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
     answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
@@ -503,7 +509,7 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
         console.log(response);
       }
       sendText();
-      questionBlob.style.opacity = "100";
+      //questionBlob.style.opacity = "100";
       questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
       answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
       answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
@@ -524,6 +530,11 @@ const question = document.querySelector(".neznayka__question");
 sendVoice.addEventListener("click", function () {
   input.classList.add("hidden");
   keyboard.classList.remove("click");
+  neznayka.src = "./img/Незнайка-задумался.gif";
+  function stateNeznayka() {
+    neznayka.src = "./img/Незнайка в ожидании.gif";
+  }
+  setTimeout(stateNeznayka, 4900);
 
   sendVoice.classList.add("hidden");
   stopVoice.classList.remove("hidden");
@@ -588,6 +599,13 @@ keyboard.addEventListener("click", function () {
     keyboard.classList.toggle("click");
     cursor.select();
   }
+  if (keyboard.classList.contains("click")) {
+    neznayka.src = "./img/Незнайка-задумался.gif";
+    function stateNeznayka() {
+      neznayka.src = "./img/Незнайка в ожидании.gif";
+    }
+    setTimeout(stateNeznayka, 4900);
+  }
   stopClock();
   startClock();
 });
@@ -595,11 +613,9 @@ keyboard.addEventListener("click", function () {
 home.addEventListener("click", function () {
   home.classList.add("clear");
   answerText.textContent = "Привет! Меня зовут Незнайка. Возьми микрофон, поболтаем";
-  questionBlob.style.transform = "scale(1)";
+  questionBlob.classList.add("hidden");
+  questionBlob.style.transform = "scale(0)";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
-  answerBlob.style.transform = "scale(1)";
-  questionBlob.style.backgroundImage = "url('./img/dialog-user.png')";
-  question.textContent = "Готов тебя слушать, нажми на микрофон";
   if (question.textContent.length <= 10) {
     answerQuestion.style.fontSize = "4vw";
   } else if (question.textContent.length <= 60) {
@@ -672,7 +688,7 @@ inputSendBut.addEventListener("click", async function () {
   }
   setTimeout(stateNeznayka, 7100);
   sendText();
-  questionBlob.style.opacity = "100";
+  // questionBlob.style.opacity = "100";
   questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
   answerBlob.style.transform = "translate(4vw, 1vw) scale(1.2)";
@@ -681,6 +697,61 @@ inputSendBut.addEventListener("click", async function () {
   answer.textContent = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
   stopClock();
   startClock();
+});
+document.addEventListener("keyup", function (event) {
+  if (event.altKey && event.key === "ф") {
+    if (startMicro.classList.contains("hidden") && keyboard.classList.contains("click")) {
+      return;
+    } else {
+      startMicro.classList.add("opacityWait");
+      shrek.classList.add("opacityWait");
+      shrek2.classList.add("opacityWait");
+      ufo.classList.add("opacityWait");
+      comet.classList.add("opacityWait");
+      questionBlob.classList.add("opacityWait");
+      answerBlob.classList.add("opacityWait");
+      function NoVisibilityNeznayka() {
+        neznayka.classList.add("opacityWait");
+        main.style.backgroundPositionY = "94vh";
+        waitMoon.style.transition = "top 7s";
+        waitMoon.style.top = "57vh";
+      }
+      setTimeout(NoVisibilityNeznayka, 2000);
+      function RunNez() {
+        waitNez.src = "./img/Незнайка-бежит.gif";
+        waitNez.style.transition = "bottom 4s";
+        waitNez.style.bottom = "20vh";
+        home.classList.add("run");
+      }
+      setTimeout(RunNez, 6000);
+    }
+  }
+});
+
+home.addEventListener("click", function () {
+  if (home.classList.contains("run")) {
+    home.classList.remove("run");
+    waitNez.style.bottom = "110vh";
+    waitMoon.style.top = "100vh";
+    function ClassicMoon() {
+      main.style.backgroundPositionY = "";
+    }
+    setTimeout(ClassicMoon, 3000);
+    function ClassicNez() {
+      neznayka.classList.remove("opacityWait");
+    }
+    setTimeout(ClassicNez, 6000);
+    function ClassicBlob() {
+      startMicro.classList.remove("opacityWait");
+      shrek.classList.remove("opacityWait");
+      shrek2.classList.remove("opacityWait");
+      ufo.classList.remove("opacityWait");
+      comet.classList.remove("opacityWait");
+      questionBlob.classList.remove("opacityWait");
+      answerBlob.classList.remove("opacityWait");
+    }
+    setTimeout(ClassicBlob, 8000);
+  }
 });
 
 window.voiceRecorder = new VoiceRecorder();
