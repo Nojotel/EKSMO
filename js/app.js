@@ -754,7 +754,7 @@ document.addEventListener("keyup", function (event) {
         waitNez.style.bottom = "6vw";
         home.classList.add("run");
       }
-      setTimeout(RunNez, 5700);
+      setTimeout(RunNez, 5600);
     }
   }
 });
@@ -763,7 +763,7 @@ home.addEventListener("click", function () {
   if (home.classList.contains("run")) {
     home.classList.remove("run");
     waitNez.style.bottom = "110vh";
-    waitMoon.style.top = "100vh";
+    waitMoon.style.bottom = "-100vw";
     function ClassicMoon() {
       main.style.backgroundPositionY = "";
     }
