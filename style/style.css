@@ -570,8 +570,8 @@ body {
   z-index: 5;
 }
 .comet {
-  width: 50vw;
-  height: 50vh;
+  width: 40vw;
+  height: 40vh;
   background: url(../img/Комета.gif);
   background-repeat: no-repeat;
   background-size: contain;

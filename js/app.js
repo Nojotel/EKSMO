@@ -45,6 +45,24 @@ function clock() {
   keyboard.classList.remove("click");
   ufo.classList.remove("hidden");
   comet.classList.remove("hidden");
+  console.log("xxxx");
+  //answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
+  function visibilityNeznayka() {
+    neznayka.src = "./img/Привет, меня зовут Незн. Давай поболтаем.gif";
+  }
+  setInterval(visibilityNeznayka, 3050 + 30000);
+
+  function visibilityAnswerTextWait() {
+    answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка.png')";
+    answerBlob.style.transform = "scale(1)";
+    answerText.textContent = "";
+    visibilityAnswerText();
+  }
+  setTimeout(visibilityAnswerTextWait, 8050 + 30000);
+  function stateNeznayka() {
+    neznayka.src = "./img/Незнайка в ожидании.gif";
+  }
+  setInterval(stateNeznayka, 12050 + 30000);
 }
 const startClock = () => {
   questionBlob.classList.remove("hidden");
