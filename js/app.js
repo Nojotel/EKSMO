@@ -334,7 +334,6 @@ async function senVoice(blob) {
     print_text(text, elem, delay);
   }
   visibilityAnswerText1();
-
   answer.textContent = "";
   function visibilityAnswerText2() {
     let text = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
@@ -363,8 +362,8 @@ async function senVoice(blob) {
 
     print_text(text, elem, delay);
   }
-  visibilityAnswerText2();
   neznayka.src = "./img/wait-for-question-and-answer.gif";
+  setTimeout(visibilityAnswerText2, 5000);
   function stateNeznayka() {
     neznayka.src = "./img/Незнайка в ожидании.gif";
   }
@@ -548,7 +547,10 @@ const question = document.querySelector(".neznayka__question");
 sendVoice.addEventListener("click", function () {
   input.classList.add("hidden");
   keyboard.classList.remove("click");
-  neznayka.src = "./img/Незнайка-задумался.gif";
+  if (stopVoice.classList.contains("hidden")) {
+    neznayka.src = "./img/Незнайка-задумался.gif";
+    console.log("чЕ");
+  }
   function stateNeznayka() {
     neznayka.src = "./img/Незнайка в ожидании.gif";
   }
@@ -706,6 +708,7 @@ inputSendBut.addEventListener("click", async function () {
   }
   setTimeout(stateNeznayka, 7100);
   sendText();
+
   // questionBlob.style.opacity = "100";
   questionBlob.style.transform = "translate(5vw, 1vw) scale(0.8)";
   answerBlob.style.backgroundImage = "url('./img/dialog-Незнайка-yellow.png')";
