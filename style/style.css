@@ -885,6 +885,8 @@ body {
   background-color: var(--color-transparent);
   border: 0;
   background-image: url(../img/OBJECTS\ text.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .inputSend {
   background-position: right;
