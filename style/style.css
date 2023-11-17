@@ -823,6 +823,7 @@ body {
   position: fixed;
   right: 38vw;
   bottom: 37vh;
+  transition: 0.5s ease-out;
 
   animation-name: sizeText;
   animation-duration: 1s;
@@ -841,7 +842,7 @@ body {
   position: fixed;
   right: 4vw;
   bottom: 29vh;
-  transition: transform 0.5s;
+  transition: 0.5s ease-out;
   transform: scale(0);
 
   /* animation-name: sizeTextQuestion;
@@ -990,11 +991,11 @@ body {
 }
 .opacity {
   opacity: 100;
-  transition: opacity 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 .opacityWait {
   opacity: 0;
-  transition: opacity 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 .pulse {
   animation-name: sizeMicro;

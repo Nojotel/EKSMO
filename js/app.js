@@ -263,21 +263,21 @@ class VoiceRecorder {
     this.recorderRef.pause();
     this.mediaRecorder.stop();
     //question.textContent = "Подожди, я думаю";
-    question.textContent = "";
+    answer.textContent = "";
     function visibilityAnswerText() {
       let text = `Подожди, я думаю...`;
       let delay = 40;
-      let elem = question;
+      let elem = answer;
       if (text.length <= 10) {
-        answerQuestion.style.fontSize = "4vw";
+        answerTanswerText.style.fontSize = "4vw";
       } else if (text.length <= 60) {
-        answerQuestion.style.fontSize = "2vw";
+        answerText.style.fontSize = "2vw";
       } else if (text.length <= 110) {
-        answerQuestion.style.fontSize = "1.35vw";
+        answerText.style.fontSize = "1.35vw";
       } else if (text.length <= 220) {
-        answerQuestion.style.fontSize = "0.9vw";
+        answerText.style.fontSize = "0.9vw";
       } else if (text.length > 221) {
-        answerQuestion.style.fontSize = "0.8vw";
+        answerText.style.fontSize = "0.8vw";
       }
 
       let print_text = function (text, elem, delay) {
@@ -337,7 +337,6 @@ async function senVoice(blob) {
     print_text(text, elem, delay);
   }
   visibilityAnswerText1();
-  answer.textContent = "";
   function visibilityAnswerText2() {
     let text = "Александр, я легко отвечу на такой вопрос. Земля круглая!";
     let delay = 40;
@@ -353,6 +352,7 @@ async function senVoice(blob) {
     } else if (text.length > 221) {
       answerText.style.fontSize = "0.8vw";
     }
+    answer.textContent = "";
     let print_text = function (text, elem, delay) {
       if (text.length > 0) {
         elem.innerHTML += text[0];
