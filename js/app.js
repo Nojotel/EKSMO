@@ -84,10 +84,10 @@ function visibilityStar() {
   star.classList.add("opacity");
   star1.classList.add("opacity");
   star2.classList.add("opacity");
-  star3.classList.add("opacity");
+  //star3.classList.add("opacity");
   star4.classList.add("opacity");
   star5.classList.add("opacity");
-  star6.classList.add("opacity");
+  //star6.classList.add("opacity");
 }
 setTimeout(visibilityStar, 2000 + timeHello);
 
@@ -723,10 +723,12 @@ inputSendBut.addEventListener("click", async function () {
   startClock();
 });
 document.addEventListener("keyup", function (event) {
-  if (event.altKey && event.key === "ф") {
+  if (event.altKey && event.key === "ф" && !neznayka.classList.contains("opacityWait")) {
+    console.log("ждун");
     if (startMicro.classList.contains("hidden") && keyboard.classList.contains("click")) {
       return;
     } else {
+      console.log("ждун2");
       startMicro.classList.add("opacityWait");
       shrek.classList.add("opacityWait");
       shrek2.classList.add("opacityWait");
@@ -745,7 +747,6 @@ document.addEventListener("keyup", function (event) {
         waitNez.src = "./img/Незнайка-падает.gif";
         waitNez.style.transition = "bottom 1.8s";
         waitNez.style.bottom = "6vw";
-        home.classList.add("run");
       }
       setTimeout(FallNez, 4000);
       function RunNez() {
