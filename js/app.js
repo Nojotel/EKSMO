@@ -109,7 +109,7 @@ function visibilityAnswerText() {
   if (text.length <= 10) {
     answerText.style.fontSize = "4vw";
   } else if (text.length <= 60) {
-    answerText.style.fontSize = "2vw";
+    answerText.style.fontSize = "1.8vw";
   } else if (text.length <= 110) {
     answerText.style.fontSize = "1.35vw";
   } else if (text.length <= 220) {
@@ -271,7 +271,7 @@ class VoiceRecorder {
       if (text.length <= 10) {
         answerTanswerText.style.fontSize = "4vw";
       } else if (text.length <= 60) {
-        answerText.style.fontSize = "2vw";
+        answerText.style.fontSize = "1.8vw";
       } else if (text.length <= 110) {
         answerText.style.fontSize = "1.35vw";
       } else if (text.length <= 220) {
@@ -316,7 +316,7 @@ async function senVoice(blob) {
     if (text.length <= 10) {
       answerQuestion.style.fontSize = "4vw";
     } else if (text.length <= 60) {
-      answerQuestion.style.fontSize = "2vw";
+      answerQuestion.style.fontSize = "1.8vw";
     } else if (text.length <= 110) {
       answerQuestion.style.fontSize = "1.35vw";
     } else if (text.length <= 220) {
@@ -344,7 +344,7 @@ async function senVoice(blob) {
     if (text.length <= 10) {
       answerText.style.fontSize = "4vw";
     } else if (text.length <= 60) {
-      answerText.style.fontSize = "2vw";
+      answerText.style.fontSize = "1.8vw";
     } else if (text.length <= 110) {
       answerText.style.fontSize = "1.35vw";
     } else if (text.length <= 220) {
@@ -390,7 +390,7 @@ document.addEventListener("keyup", function (event) {
     if (question.textContent.length <= 10) {
       answerQuestion.style.fontSize = "4vw";
     } else if (question.textContent.length <= 60) {
-      answerQuestion.style.fontSize = "2vw";
+      answerQuestion.style.fontSize = "1.8vw";
     } else if (question.textContent.length <= 110) {
       answerQuestion.style.fontSize = "1.35vw";
     } else if (question.textContent.length <= 220) {
@@ -574,7 +574,7 @@ sendVoice.addEventListener("click", function () {
     if (text.length <= 10) {
       answerQuestion.style.fontSize = "4vw";
     } else if (text.length <= 60) {
-      answerQuestion.style.fontSize = "2vw";
+      answerQuestion.style.fontSize = "1.8vw";
     } else if (text.length <= 110) {
       answerQuestion.style.fontSize = "1.35vw";
     } else if (text.length <= 220) {
@@ -642,7 +642,7 @@ home.addEventListener("click", function () {
   if (question.textContent.length <= 10) {
     answerQuestion.style.fontSize = "4vw";
   } else if (question.textContent.length <= 60) {
-    answerQuestion.style.fontSize = "2vw";
+    answerQuestion.style.fontSize = "1.8vw";
   } else if (question.textContent.length <= 110) {
     answerQuestion.style.fontSize = "1.35vw";
   } else if (question.textContent.length <= 220) {
@@ -685,7 +685,7 @@ inputSendBut.addEventListener("click", async function () {
   if (question.textContent.length <= 10) {
     answerQuestion.style.fontSize = "4vw";
   } else if (question.textContent.length <= 60) {
-    answerQuestion.style.fontSize = "2vw";
+    answerQuestion.style.fontSize = "1.8vw";
   } else if (question.textContent.length <= 110) {
     answerQuestion.style.fontSize = "1.35vw";
   } else if (question.textContent.length <= 220) {
