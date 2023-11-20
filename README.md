@@ -1,1 +1,1 @@
-# EKSMO.
+# EKSMO

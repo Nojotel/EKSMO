@@ -1477,8 +1477,14 @@ body {
   .logo {
     width: 500px;
     height: 133px;
-    bottom: 50px;
-    left: 70px;
+    bottom: 97px;
+    left: 152px;
+  }
+  .logoSF {
+    width: 410px;
+    height: 55px;
+    bottom: 20px;
+    left: 149px;
   }
 }
 @media (max-width: 1440px) {
