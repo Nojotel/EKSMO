@@ -39,9 +39,20 @@ body {
   bottom: 110vh;
 }
 .logo {
-  width: 386px;
-  height: 80px;
+  width: 286px;
+  height: 95px;
   background-image: url(../img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 70px;
+  left: 55px;
+  z-index: -1;
+}
+.logoSF {
+  width: 299px;
+  height: 25px;
+  background-image: url(../img/SkillFactory-01.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: fixed;
@@ -1313,6 +1324,18 @@ body {
   }
 }
 @media (max-width: 2048px) {
+  .logo {
+    width: 200px;
+    height: 57px;
+    bottom: 47px;
+    left: 58px;
+  }
+  .logoSF {
+    width: 299px;
+    height: 15px;
+    bottom: 20px;
+    left: 50px;
+  }
   .container_keyboard {
     width: 68vw;
     height: 58vh;
@@ -1460,8 +1483,16 @@ body {
 }
 @media (max-width: 1440px) {
   .logo {
-    width: 323px;
-    height: 66px;
+    width: 200px;
+    height: 54px;
+    bottom: 47px;
+    left: 79px;
+  }
+  .logoSF {
+    width: 299px;
+    height: 15px;
+    bottom: 20px;
+    left: 68px;
   }
   .stars1 {
     transform: scale(0.2);
