@@ -45,7 +45,6 @@ function clock() {
   keyboard.classList.remove("click");
   ufo.classList.remove("hidden");
   comet.classList.remove("hidden");
-  console.log("xxxx");
   //answerBlob.style.transform = "translate(-2vw, 1vw) scale(0.8)";
   function waiting() {
     function visibilityNeznayka() {
@@ -128,9 +127,6 @@ function visibilityAnswerText() {
       }, delay);
     }
   };
-
-  //console.log(text.length);
-  //console.log(answerText.style.fontSize='14px');
   print_text(text, elem, delay);
 }
 setTimeout(visibilityAnswerText, 8050 + timeHello);
@@ -496,7 +492,6 @@ document.querySelectorAll("#keyboard .key").forEach((element) => {
       element.classList.remove("pressKey");
     });
     let code = this.getAttribute("data");
-    console.log(code);
     this.classList.add("pressKey");
     cursor.value += this.textContent;
     if (code === '8"') {
@@ -552,7 +547,6 @@ sendVoice.addEventListener("click", function () {
   keyboard.classList.remove("click");
   if (stopVoice.classList.contains("hidden")) {
     neznayka.src = "./img/Незнайка-задумался.gif";
-    console.log("чЕ");
   }
   function stateNeznayka() {
     neznayka.src = "./img/Незнайка в ожидании.gif";
@@ -724,11 +718,9 @@ inputSendBut.addEventListener("click", async function () {
 });
 document.addEventListener("keyup", function (event) {
   if (event.altKey && event.key === "ф" && !neznayka.classList.contains("opacityWait")) {
-    console.log("ждун");
     if (startMicro.classList.contains("hidden") && keyboard.classList.contains("click")) {
       return;
     } else {
-      console.log("ждун2");
       startMicro.classList.add("opacityWait");
       shrek.classList.add("opacityWait");
       shrek2.classList.add("opacityWait");
@@ -793,3 +785,5 @@ keyboard.addEventListener("click", function () {
 });
 
 window.voiceRecorder = new VoiceRecorder();
+////////////////////////
+///////////////
