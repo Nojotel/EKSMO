@@ -1,5 +1,7 @@
 # EKSMO
 
+![Cертификат](https://github.com/Nojotel/EKSMO/blob/main/img/%D0%90%D0%9B%D0%95%D0%9A%D0%A1%D0%90%D0%9D%D0%94%D0%A0%20%D0%A4%D0%81%D0%94%D0%9E%D0%A0%D0%9E%D0%92-1.png)
+
 # Вводные и бриф
 
 ## О компании
